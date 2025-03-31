@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import TryItOutIframe from "../../components/TryItOutIframe";
 
 const projects = [
   {
@@ -25,7 +23,7 @@ const projects = [
     description:
       "A state-of-the-art AI chatbot for healthcare that assists with preliminary diagnosis and answers common health queries using natural language processing.",
     image: "/placeholder.svg",
-    link: "/projects/healthcare-chatbot",
+    link: "https://vite-react-supabase.vercel.app/",
   },
 ];
 
@@ -43,17 +41,17 @@ export default function Projects() {
               <div className="p-4 text-white">
                 <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
                 <p className="text-gray-300 mb-4">{project.description}</p>
-                {project.link ? (
-                  project.id === 3 ? (
-                    <TryItOutIframe />
-                  ) : (
-                    <Link href={project.link} className="text-blue-400 hover:text-blue-300 transition-colors">
-                      Try it out →
-                    </Link>
-                  )
-                ) : (
-                  project.id === 3 && <TryItOutIframe />
+                {project.link && (
+                  <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Try it out →
+                </a>
                 )}
+
               </div>
             </div>
           ))}
