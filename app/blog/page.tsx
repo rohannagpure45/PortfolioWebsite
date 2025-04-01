@@ -12,6 +12,27 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 5,
+    title: "Inspiration to the Hackathon Project",
+    excerpt: "Why I Built the Healthcare Chatbot",
+    content: `When I was in middle school, I slipped while running on hardwood floors in socks — the classic mistake. The result? A painful contusion on my knee. I couldn’t move it without sharp pain, and my parents and I feared the worst. We rushed to the ER, got X-rays, and were eventually told it wasn’t serious — just some rest, crutches, and a brace would do the trick.
+
+The hospital bill? $3,000.
+
+It was an expensive lesson: sometimes, what feels urgent might not be serious — but in the moment, there’s no easy way to know that.
+
+Fast forward to last week, my friend was telling me about a Whoop report showing his HRV (Heart Rate Variability) was way off. He wasn’t sleeping — just lying awake for hours in bed — and his numbers looked abnormal. It made me wonder: what if this actually is something serious? What kind of help should he seek, and when?
+
+That contrast — my unnecessary ER visit versus my friend’s subtle but possibly important signal — made me realize how inefficient and reactive our healthcare system is.
+
+So I built this project.
+
+I wanted to create a tool that empowers patients to better understand their symptoms before spending thousands or waiting days for a reply from a provider. A tool that bridges the gap between data (like biometrics) and context (like symptoms), and offers guidance without overloading the healthcare system.
+
+This isn't just code. It's a response to real, lived inefficiencies — and my way of helping make healthcare more accessible, affordable, and informed for everyone.`,
+    date: "2025-03-31",
+  },
+  {
     id: 4,
     title: "First post",
     excerpt: "Marketing Lessons: Nike",
