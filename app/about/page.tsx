@@ -86,6 +86,7 @@ export default function About() {
                   <li>Algorithms and Data Structures</li>
                   <li>Financial Management</li>
                   <li>CS Research</li>
+                  <li>Managerial Accounting</li>
                 </ul>
               </div>
             </div>
@@ -137,6 +138,22 @@ export default function About() {
             <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
             <div className="space-y-6">
               <div>
+                <h3 className="text-xl font-semibold">Northeastern Electric Racing</h3>
+                <p className="text-blue-400">Software Developer</p>
+                <p className="text-gray-400 mb-2">January 2025 - Present</p>
+                <ul className="list-disc list-inside text-gray-300 space-y-1">
+                  <li>Developed and maintained FinishLine, a full-stack project </li>
+                  management dashboard utilizing JavaScript, TypeScript, 
+                  React, Express, and Node.js, improving the team's build
+                  cycle management and efficiency.
+                  <li>Implemented containerization with Docker to create a
+                  scalable, consistent development and production environments, 
+                  reducing deployment time by ~13% and setting the foundation 
+                  for easier future scaling.</li>
+                  <li> Managed version control and deployment pipelines using Git and CI/CD tools reducing conflicts by 20%.</li>
+                </ul>
+              </div>
+              <div>
                 <h3 className="text-xl font-semibold">Light Co.</h3>
                 <p className="text-blue-400">Founder, e-Commerce Business</p>
                 <p className="text-gray-400 mb-2">May 2022 - February 2023</p>
@@ -168,6 +185,7 @@ export default function About() {
                 <li>AI Club</li>
                 <li>Quant Club</li>
                 <li>CTF Cybersecurity Club</li>
+                <li>Northeastern Electric Racing</li>
               </ul>
               <ul className="list-disc list-inside text-gray-300">
                 <li>Disrupt</li>
