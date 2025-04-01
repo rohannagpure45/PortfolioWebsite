@@ -32,6 +32,14 @@ export default function About() {
                 >
                   LinkedIn
                 </a>
+                <a
+                  href="https://github.com/rohannagpure45"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-transparent border-2 border-white px-4 py-2 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Github
+                </a>
               </div>
             </div>
           </div>
