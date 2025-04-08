@@ -148,9 +148,9 @@ export default function About() {
                 <p className="text-blue-600">Software Developer</p>
                 <p className="text-gray-500 mb-2">January 2025 - Present</p>
                 <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>Developed and maintained FinishLine, a full-stack project management dashboard...</li>
-                  <li>Implemented containerization with Docker to create a scalable, consistent environment...</li>
-                  <li>Managed version control and deployment pipelines using Git and CI/CD tools...</li>
+                  <li>Developed and maintained FinishLine, a full-stack project management dashboard utilizing JavaScript, TypeScript, React, Express, and Node.js, improving team's build cycle management and efficiency.</li>
+                  <li>Implemented containerization with Docker to create scalable, consistent development and production environments, reducing deployment time by ~13%, setting foundation for easier future scaling.</li>
+                  <li>Managed version control and deployment pipelines using Git and CI/CD tools reducing conflicts by 20%.</li>
                 </ul>
               </div>
               <div>
