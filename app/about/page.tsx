@@ -1,49 +1,38 @@
 "use client";
 
-import Image from "next/image";
-
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Hero Section */}
+      {/* Hero Section without Image */}
       <section className="bg-gradient-to-r from-blue-600 to-cyan-600 py-16 text-white mb-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/headshot1-wJmDNwnWRISn0d8ZzLWR2975UL7KsO.jpeg"
-              alt="Rohan Nagpure"
-              width={300}
-              height={300}
-              className="rounded-2xl shadow-xl object-cover"
-            />
-            <div>
-              <h1 className="text-4xl font-bold mb-4">Rohan Nagpure</h1>
-              <p className="text-xl mb-4">Computer Science &amp; Business Administration, Fintech Student</p>
-              <div className="flex gap-4">
-                <a
-                  href="mailto:nagpure.r@northeastern.edu"
-                  className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Email Me
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/rohan-nagpure/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-transparent border-2 border-white px-4 py-2 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href="https://github.com/rohannagpure45"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-transparent border-2 border-white px-4 py-2 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Github
-                </a>
-              </div>
-            </div>
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold mb-4">Rohan Nagpure</h1>
+          <p className="text-xl mb-4">
+            Computer Science &amp; Business Administration, Fintech Student
+          </p>
+          <div className="flex justify-center gap-4">
+            <a
+              href="mailto:nagpure.r@northeastern.edu"
+              className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Email Me
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rohan-nagpure/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent border-2 border-white px-4 py-2 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/rohannagpure45"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent border-2 border-white px-4 py-2 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Github
+            </a>
           </div>
         </div>
       </section>
@@ -60,9 +49,7 @@ export default function About() {
               <p className="text-gray-700">Expected Graduation: December 2026</p>
               <p className="text-blue-600 mt-2">Concentration in Fintech</p>
               <p className="text-gray-700 mt-4">
-                My passion lies at the intersection of finance and technology. I'm particularly interested 
-                in working in the fintech industry, where I can apply my computer science skills to solve 
-                complex financial problems...
+                My passion lies at the intersection of finance and technology. I'm particularly interested in working in the fintech industry, where I can apply my computer science skills to solve complex financial problems...
               </p>
             </div>
           </section>
@@ -137,25 +124,25 @@ export default function About() {
           <section className="bg-white border border-gray-200 rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold mb-4 text-gray-900">Work Experience</h2>
             <div className="space-y-6">
-            <div>
-      <h3 className="text-xl font-semibold text-gray-800">Speekr</h3>
-      <p className="text-blue-600">Software Engineer</p>
-      <p className="text-gray-500 mb-2">Cypress, TX | Oct 2024 – Feb 2025</p>
-      <ul className="list-disc list-inside text-gray-700 space-y-1">
-        <li>
-          Engineered real time subtitle generation feature by integrating the Agentic RAG framework with an STT service.
-        </li>
-        <li>
-          Model refinement boosted caption accuracy by 7% and reduced transcription delays by 11%.
-        </li>
-        <li>
-          Assisted in deploying scalable cloud solutions with Docker and AWS, improving reliability.
-        </li>
-        <li>
-          Collaborated with cross-functional teams using Flask, Node.js, and REST APIs to optimize subtitle processing workflows, enhancing meeting accessibility and driving a 6% reduction in error rates.
-        </li>
-      </ul>
-    </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800">Speekr</h3>
+                <p className="text-blue-600">Software Engineer</p>
+                <p className="text-gray-500 mb-2">Cypress, TX | Oct 2024 – Feb 2025</p>
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                  <li>
+                    Engineered real time subtitle generation feature by integrating the Agentic RAG framework with an STT service.
+                  </li>
+                  <li>
+                    Model refinement boosted caption accuracy by 7% and reduced transcription delays by 11%.
+                  </li>
+                  <li>
+                    Assisted in deploying scalable cloud solutions with Docker and AWS, improving reliability.
+                  </li>
+                  <li>
+                    Collaborated with cross-functional teams using Flask, Node.js, and REST APIs to optimize subtitle processing workflows, enhancing meeting accessibility and driving a 6% reduction in error rates.
+                  </li>
+                </ul>
+              </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800">Northeastern Electric Racing</h3>
                 <p className="text-blue-600">Software Developer</p>
