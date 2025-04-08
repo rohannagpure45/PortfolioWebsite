@@ -104,6 +104,7 @@ export default function About() {
                   <li>Linux</li>
                   <li>Microsoft Suite</li>
                   <li>Git</li>
+                  <li>Figma</li>
                   <li>x86 Assembly</li>
                 </ul>
               </div>
@@ -113,7 +114,6 @@ export default function About() {
                   <li>Java</li>
                   <li>C++</li>
                   <li>Python</li>
-                  <li>Figma</li>
                   <li>Racket</li>
                   <li>React</li>
                   <li>HTML</li>
