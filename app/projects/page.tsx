@@ -22,7 +22,7 @@ const projects = [
     title: "AI Healthcare Chatbot",
     description:
       "A state-of-the-art AI chatbot for healthcare that assists with preliminary diagnosis and answers common health queries using natural language processing.",
-    image: "/placeholder.svg",
+    image: "/img01.jpg",
     link: "https://vite-react-supabase.vercel.app/",
   },
 ];

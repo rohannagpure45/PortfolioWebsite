@@ -12,6 +12,36 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 8,
+    title: "On the Greats",
+    excerpt: "Lebron",
+    content: `Becoming great is hard, it requires more than just discipline and consistency. 
+    
+    It requires competitiveness. You have to wake up everyday and keep going no matter how far you've come or how far ahead of the competition you are.
+    Lebron is the undisputed great but hes still grinding daily to make it unanimous -- why aren't you??`,
+    date: "2025-04-06",
+  },
+  {
+    id: 7,
+    title: "Growth and Consistency",
+    excerpt: "working hard",
+    content: `Consistency is key to growth, with consistency you need dicipline and the right frame and mindset. 
+    Always think positive.
+    
+    Change what you can change, ignore what you can't.
+    Closed mouths do not get fed. Opportunities do not fall off trees. 
+    Stay hungry, stay focused, stay active.`,
+    date: "2025-04-08",
+  },
+  {
+    id: 6,
+    title: "AI Agents",
+    excerpt: "automating my workflow",
+    content: `working on creating an organization with trying to automate everything I can to max my efficiency.
+    That way I can work when I am not at my computer, (or even sleeping?)`,
+    date: "2025-04-06",
+  },
+  {
     id: 5,
     title: "Inspiration to the Hackathon Project",
     excerpt: "Why I Built the Healthcare Chatbot",
