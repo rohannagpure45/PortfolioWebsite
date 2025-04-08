@@ -1,28 +1,74 @@
+/* Minimal global + Merriweather for prose + Inter for UI */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* 
+  Root variables for a clean, minimal look in light/dark mode
+  (Can tweak for your preference)
+*/
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 20, 20, 20; /* Dark text for general sections */
+  --background-color: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 230, 230, 230;
+    --background-color: 20, 20, 20;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+/* Smooth scrolling for that "Apple-like" feel */
+html {
+  scroll-behavior: smooth;
 }
 
+/* Global body styles */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-color));
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Keep Merriweather for `.prose` blocks if you want serif text in articles */
 .prose {
   font-family: "Merriweather", serif;
 }
 
+/* Subtle transitions for links/buttons */
+a, button {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+/* A sample hero with gradient */
+.hero {
+  background: linear-gradient(to right, #007aff, #0bd3d3);
+  color: #fff; /* Make text white for contrast on gradient */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+.hero .button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #007aff;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+.hero .button:hover {
+  transform: scale(1.05);
+}

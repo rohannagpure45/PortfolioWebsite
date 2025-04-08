@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 interface BlogPost {
-  id: number
-  title: string
-  excerpt: string
-  content: string
-  date: string
+  id: number;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
 }
 
 const blogPosts: BlogPost[] = [
@@ -15,31 +15,31 @@ const blogPosts: BlogPost[] = [
     id: 8,
     title: "On the Greats",
     excerpt: "Lebron",
-    content: `Becoming great is hard, it requires more than just discipline and consistency. 
+    content: `Becoming great is hard, it requires more than just discipline and consistency.
     
-    It requires competitiveness. You have to wake up everyday and keep going no matter how far you've come or how far ahead of the competition you are.
-    Lebron is the undisputed great but hes still grinding daily to make it unanimous -- why aren't you??`,
+It requires competitiveness. You have to wake up every day and keep going no matter how far you've come or how far ahead of the competition you are.
+Lebron is the undisputed great but he’s still grinding daily to make it unanimous — why aren't you??`,
     date: "2025-04-06",
   },
   {
     id: 7,
     title: "Growth and Consistency",
     excerpt: "working hard",
-    content: `Consistency is key to growth, with consistency you need dicipline and the right frame and mindset. 
-    Always think positive.
-    
-    Change what you can change, ignore what you can't.
-    Closed mouths do not get fed. Opportunities do not fall off trees. 
-    Stay hungry, stay focused, stay active.`,
+    content: `Consistency is key to growth; with consistency, you need discipline and the right mindset. 
+Always think positive.
+
+Change what you can change, ignore what you can't.
+Closed mouths do not get fed. Opportunities do not fall off trees.
+Stay hungry, stay focused, stay active.`,
     date: "2025-04-08",
   },
   {
     id: 6,
     title: "AI Agents",
     excerpt: "automating my workflow",
-    content: `working on creating an organization with trying to automate everything I can to max my efficiency.
-    That way I can work when I am not at my computer, (or even sleeping?)`,
-    date: "2025-04-06",
+    content: `Working on creating an organization that automates everything I can to maximize efficiency.
+That way I can work when I am not at my computer—or even sleeping?`,
+    date: "2025-04-07",
   },
   {
     id: 5,
@@ -66,31 +66,32 @@ This isn't just code. It's a response to real, lived inefficiencies — and my w
     id: 4,
     title: "First post",
     excerpt: "Marketing Lessons: Nike",
-    content: `Nike is exceptional at marketing, They are endorsed by a ton of influencers and athletes. The swoosh lives without the name.
-    
+    content: `Nike is exceptional at marketing. They partner with a ton of influencers and athletes. The swoosh lives without the name.
 
-    Nike was been around since 1964 and is one of the most recognizable brand. They spend a lot of time and money on legal fees to defend and protect their brand.
+Nike has been around since 1964 and is one of the most recognizable brands. They spend a lot of time and money on legal fees to defend and protect their brand.
 
-    They grossed $51 billion last year. In a market with competeitors like Puma, Adidas, Under Armor, and North Face, Patagonia, Reebok, Eddie Bauer.
+They grossed $51 billion last year. In a market with competitors like Puma, Adidas, Under Armor, North Face, Patagonia, Reebok, Eddie Bauer.
 
-    There are different levels of product targeting different market segments. They make ultra expensive soccer cleats for high performance athletes but also lounge/leisurewear for everyday people.
+There are different product lines targeting different market segments: from ultra-expensive soccer cleats for high-performance athletes to lounge/leisurewear for everyday people.
 
-    A company misson is what the companies objectives and goals are. Goals can change but the mission remains long term.
+A company’s mission reflects its long-term objectives. Goals can change, but the mission remains longer term.
 
-    A companies portfolio has to align with their objectives and goals so that they can achieve their mission to be successful.`,
+A company’s portfolio must align with its objectives and goals to achieve its mission and succeed.`,
     date: "2025-01-15",
   },
   {
     id: 1,
     title: "Understanding Market Volatility",
-    excerpt: "Exploring the factors that drive market fluctuations and strategies to navigate volatile periods.",
+    excerpt:
+      "Exploring the factors that drive market fluctuations and strategies to navigate volatile periods.",
     content: `Market volatility is a natural part of investing...`,
     date: "2023-05-15",
   },
   {
     id: 2,
     title: "The Rise of ESG Investing",
-    excerpt: "Analysis of how Environmental, Social, and Governance factors are reshaping investment strategies.",
+    excerpt:
+      "Analysis of how Environmental, Social, and Governance factors are reshaping investment strategies.",
     content: `ESG investing has become increasingly important...`,
     date: "2023-06-02",
   },
@@ -101,52 +102,59 @@ This isn't just code. It's a response to real, lived inefficiencies — and my w
     content: `As cryptocurrencies continue to evolve...`,
     date: "2023-06-20",
   },
-].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export default function Blog() {
-  const [expandedPost, setExpandedPost] = useState<number | null>(null)
+  const [expandedPost, setExpandedPost] = useState<number | null>(null);
 
   const togglePost = (id: number) => {
-    setExpandedPost(expandedPost === id ? null : id)
-  }
+    setExpandedPost(expandedPost === id ? null : id);
+  };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4 text-center">My Blog</h1>
-        <div className="bg-gray-800 rounded-lg p-6 mb-8">
-          <p className="text-center text-gray-300">
-            Welcome to my blog where I share insights about financial markets, technology trends, and the intersection
-            of computer science and finance. Here you'll find analysis of market movements, deep dives into fintech
-            innovations, and perspectives on emerging technologies.
+    <div className="min-h-screen flex flex-col">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-cyan-600 py-16 text-white mb-12">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">My Blog</h1>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl">
+            Where I share insights about financial markets, technology trends, and the intersection
+            of computer science and finance.
           </p>
         </div>
+      </section>
+
+      {/* Main Blog Content */}
+      <div className="container mx-auto px-4 flex-grow">
         <div className="space-y-6">
           {blogPosts.map((post) => (
-            <div key={post.id} className="bg-gray-800 rounded-lg overflow-hidden">
+            <div
+              key={post.id}
+              className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden"
+            >
+              {/* Post Heading */}
               <div
-                className="p-6 cursor-pointer hover:bg-gray-700 transition-colors"
+                className="p-6 cursor-pointer hover:bg-gray-50 transition-colors"
                 onClick={() => togglePost(post.id)}
               >
                 <div className="flex justify-between items-start mb-2">
-                  <h2 className="text-2xl font-semibold">{post.title}</h2>
-                  <span className="text-gray-400 text-sm">{post.date}</span>
+                  <h2 className="text-2xl font-semibold text-gray-900">{post.title}</h2>
+                  <span className="text-gray-500 text-sm">{post.date}</span>
                 </div>
-                <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                <button className="text-blue-400 hover:text-blue-300 transition-colors">
+                <p className="text-gray-700 mb-4">{post.excerpt}</p>
+                <button className="text-blue-600 hover:text-blue-500 transition-colors">
                   {expandedPost === post.id ? "Show less" : "Read more"}
                 </button>
               </div>
+              {/* Expanded Content */}
               {expandedPost === post.id && (
-                <div className="px-6 pb-6">
-                  <div className="border-t border-gray-700 pt-4">
-                    <div className="prose prose-invert max-w-none">
-                      {post.content.split("\n").map((paragraph, index) => (
-                        <p key={index} className="mb-4">
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
+                <div className="px-6 pb-6 border-t border-gray-200">
+                  <div className="pt-4 prose max-w-none text-gray-700">
+                    {post.content.split("\n").map((paragraph, index) => (
+                      <p key={index} className="mb-4">
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
                 </div>
               )}
@@ -155,6 +163,5 @@ export default function Blog() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
