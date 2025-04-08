@@ -137,6 +137,25 @@ export default function About() {
           <section className="bg-white border border-gray-200 rounded-lg shadow-md p-6">
             <h2 className="text-2xl font-bold mb-4 text-gray-900">Work Experience</h2>
             <div className="space-y-6">
+            <div>
+      <h3 className="text-xl font-semibold text-gray-800">Speekr</h3>
+      <p className="text-blue-600">Software Engineer</p>
+      <p className="text-gray-500 mb-2">Cypress, TX | Oct 2024 – Feb 2025</p>
+      <ul className="list-disc list-inside text-gray-700 space-y-1">
+        <li>
+          Engineered real time subtitle generation feature by integrating the Agentic RAG framework with an STT service.
+        </li>
+        <li>
+          Model refinement boosted caption accuracy by 7% and reduced transcription delays by 11%.
+        </li>
+        <li>
+          Assisted in deploying scalable cloud solutions with Docker and AWS, improving reliability.
+        </li>
+        <li>
+          Collaborated with cross-functional teams using Flask, Node.js, and REST APIs to optimize subtitle processing workflows, enhancing meeting accessibility and driving a 6% reduction in error rates.
+        </li>
+      </ul>
+    </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800">Northeastern Electric Racing</h3>
                 <p className="text-blue-600">Software Developer</p>
