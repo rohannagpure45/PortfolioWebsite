@@ -12,6 +12,26 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 9,
+    title: "Priorities",
+    excerpt: "pebbles and sand",
+    content: `I usually start my days putting in hard work with the plan I created the day (night) prior.
+    I grind for around 4-5 hours on days where I don't have classes. 
+    This could be anything really, learning new skills, working on passion projects, leetcode problems or just studying.
+    Now that finals are coming up, I have been really working on my efficiency with balancing everything on my plate.
+    Making sure I am getting enough rest, exercise, and diet because health is wealth.
+    
+    Whole time making sure I am staying consistent with my diet and lifting.
+    I've been eating high protein, no carbs, lots of fruits and vegetables, no snacks or processed foods.
+    I really feel like putting the pebbles in the jar first is important which is why I start off with the most mentally straining activities before moving onto the physcial stuff.
+    That way I can get everything I want to do in the day done before I can choose what to do in my free time.
+    NBA games are getting better, music, seeing friends, or just going on walks.
+
+    Picked up stretching and yoga recently and I feel so much better.
+    Going to start working on my posture this week.`,
+    date: "2025-04-09",
+  },
+  {
     id: 8,
     title: "On the Greats",
     excerpt: "Lebron",
@@ -30,7 +50,9 @@ Always think positive.
 
 Change what you can change, ignore what you can't.
 Closed mouths do not get fed. Opportunities do not fall off trees.
-Stay hungry, stay focused, stay active.`,
+Stay hungry, stay focused, stay active.
+
+Going to try to become consistent with these blog posts to help keep myself accountable.`,
     date: "2025-04-08",
   },
   {
