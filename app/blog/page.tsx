@@ -12,6 +12,25 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 10,
+    title: "Concise Guide to AI Agents",
+    excerpt: "Key agentic AI concepts, use cases and considerations to drive ROI",
+    content: `AI agents are programs that can perform tasks independently using ai. They can boost productivity by handling operations through data access enabled.
+    They can be specialized and assembled to work in teams for different divisions, essentially automating workflows.
+    This is benefical because it saves firms costs, while being able to ship products faster. 
+
+    How Agents Work?
+    1. Sensing: Defining the problem, gathering data
+    2. Reasoning: Interpreting the data, context, and requirements to make the decision
+    3. Planning: Developing plan of action to reach required goal
+    4. Coordination: Making sure the plan is aligned with managers
+    5. Acting: Execution
+    6. Learning and adaptation: Assessing outcomes, incorperating feedback, refinement
+    
+    Tomorrow: RAG vector search retrieval tool deep dive`,
+    date: "2025-04-10",
+  },
+  {
     id: 9,
     title: "Priorities",
     excerpt: "pebbles and sand",
