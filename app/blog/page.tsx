@@ -12,6 +12,36 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 12,
+    title: "Lessons from Sun Zhu",
+    excerpt: "Don't say to much",
+    content: `Because you don't have to. ;)`,
+    date: "2025-04-17",
+  },
+  {
+    id: 11,
+    title: "Honor",
+    excerpt: "truth matters, especially about yourself",
+    content: `Honor and your reputation are among the most important non-tangible qualities about yourself
+    that should be valued and cherished at all costs. 
+    Because if the the truth doesn't matter than you aren't shit.
+    And if you think you are the shit then you protect your honor.
+    And therefore, you never lie.
+    And what is in the past is in the past and you accept and embrace the truth
+
+    So if you catch someone in a lie then you know they will do it again.
+    
+    Fool me once shame on you, fool me twice shame on me (for trusting you twice).
+    Caught someone lying to me just now, shame on me.
+
+    Make sure to make sure you are someone that matters
+    and that your word means something.
+
+    And if you do lie to someone, try to always clear it up. Even if it was a lie that had good intentions 
+    or especially if it was to bait them. If you can protect anyone it should be yourself.`,
+    date: "2025-04-16",
+  },
+  {
     id: 10,
     title: "Concise Guide to AI Agents",
     excerpt: "Key agentic AI concepts, use cases and considerations to drive ROI",
