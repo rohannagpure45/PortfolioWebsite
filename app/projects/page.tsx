@@ -27,6 +27,14 @@ const projects = [
     image: "/img01.jpg",
     link: "https://vite-react-supabase.vercel.app/",
   },
+  {
+    id: 4,
+    title: "CutSchedule - Barber Booking System",
+    description:
+      "A modern appointment booking platform for barbers and salons featuring automated SMS reminders, Google Calendar integration, and a comprehensive admin dashboard. Built with Next.js, PostgreSQL, and Twilio for seamless scheduling.",
+    image: "/cutschedule.png",
+    link: "http://cut-schedule-ck4d12342.vercel.app",
+  },
 ];
 
 export default function Projects() {
