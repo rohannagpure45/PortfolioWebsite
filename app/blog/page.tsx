@@ -21,7 +21,7 @@ But here's where I have to pump the brakes.
 
 We're careening toward what's known as the "Dead Internet Theory," and if we're not careful, AI tools like Sora 2 will accelerate us right off a cliff—taking real, human creators down with us.
 
-**What is the Dead Internet Theory?**
+What is the Dead Internet Theory?
 
 The Dead Internet Theory posits that the internet is increasingly dominated by AI-generated content, bot traffic, and corporate algorithms—all at the expense of authentic human interaction. And it's not just conspiracy theorist fear-mongering anymore. The data backs it up:
 
@@ -31,7 +31,7 @@ The Dead Internet Theory posits that the internet is increasingly dominated by A
 
 We're not talking about the future. We're talking about right now.
 
-**Sora 2: A Case Study in the Paradox**
+Sora 2: A Case Study in the Paradox
 
 Sora 2 embodies everything I love and fear about AI. On one hand, it democratizes video creation in a way that was unimaginable even a year ago. Want to create a backflip on a paddleboard with accurate buoyancy physics? Done. Need a triple axel animated with Olympic-level precision? Easy. There's even a "Cameos" feature that lets you insert yourself into scenes after a quick one-time recording.
 
@@ -41,7 +41,7 @@ But here's the dark side: within days, the platform was flooded with copyrighted
 
 And it's not just video. Research from Stanford found that when AI-generated art enters the market, there's an 88% increase in active sellers using AI—but a 23% drop in non-AI human artists. The math is brutal: more content, fewer real creators.
 
-**The Long-Term Damage**
+The Long-Term Damage
 
 Here's what keeps me up at night: if we continue down this trajectory, we're not just disrupting the "content-for-money" business model—we're fundamentally devaluing human creativity itself.
 
@@ -54,21 +54,21 @@ We're already seeing the signs:
 
 This isn't progress. It's a race to the bottom.
 
-**Where Do We Go From Here?**
+Where Do We Go From Here?
 
 I'm not calling for a ban on AI tools. That's neither practical nor desirable. Sora 2 and tools like it have legitimate, transformative use cases. They can help small creators compete, enable rapid prototyping, and unlock creative possibilities we haven't even imagined yet.
 
 But we need guardrails. We need to:
 
-1. **Protect human creators economically.** If AI is trained on human work, there needs to be compensation and attribution systems in place.
+1. Protect human creators economically. If AI is trained on human work, there needs to be compensation and attribution systems in place.
 
-2. **Preserve spaces for authenticity.** Platforms need to distinguish between AI and human-generated content—not to ban AI, but to give people the choice to engage with real humans when they want to.
+2. Preserve spaces for authenticity. Platforms need to distinguish between AI and human-generated content—not to ban AI, but to give people the choice to engage with real humans when they want to.
 
-3. **Regulate responsibly.** Copyright law needs to catch up. We can't have a wild west where AI can clone anyone's style, voice, or likeness without consent.
+3. Regulate responsibly. Copyright law needs to catch up. We can't have a wild west where AI can clone anyone's style, voice, or likeness without consent.
 
-4. **Shift the narrative.** AI should be a tool that amplifies human creativity, not a replacement for it. The goal isn't to flood the internet with content—it's to elevate quality, originality, and human connection.
+4. Shift the narrative. AI should be a tool that amplifies human creativity, not a replacement for it. The goal isn't to flood the internet with content—it's to elevate quality, originality, and human connection.
 
-**The Bottom Line**
+The Bottom Line
 
 Sora 2 is incredible. AI is incredible. But if we let these tools run unchecked, we risk creating an internet that's technically advanced but spiritually dead—a place where nothing is real, nothing is trusted, and human creators are left on the sidelines.
 
