@@ -125,6 +125,22 @@ export default function About() {
             <h2 className="text-2xl font-bold mb-4 text-gray-900">Work Experience</h2>
             <div className="space-y-6">
               <div>
+                <h3 className="text-xl font-semibold text-gray-800">Link Ventures</h3>
+                <p className="text-blue-600">Software Engineer</p>
+                <p className="text-gray-500 mb-2">Cambridge, MA | Jul 2025 – Dec 2025</p>
+                <ul className="list-disc list-inside text-gray-700 space-y-1">
+                  <li>
+                    Architected AI-accelerated full-stack project for venture accelerator, collaborating with and learning from both technical and entrepreneurial industry veterans, constantly improving in-line with present tech.
+                  </li>
+                  <li>
+                    Mastered context engineering, Git workflows, and deployment pipelines for multiple concurrent projects.
+                  </li>
+                  <li>
+                    Built and maintained 5+ microservices on Kubernetes/GCP handling 1000+ daily requests with 99.9% uptime.
+                  </li>
+                </ul>
+              </div>
+              <div>
                 <h3 className="text-xl font-semibold text-gray-800">Speekr</h3>
                 <p className="text-blue-600">Software Engineer</p>
                 <p className="text-gray-500 mb-2">Cypress, TX | Oct 2024 – Feb 2025</p>
