@@ -12,7 +12,7 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    id: 9,
+    id: 13,
     title: "Sora 2 and the Dead Internet: Why AI Innovation Can't Come at the Cost of Human Creators",
     excerpt: "On the trajectory of AI-generated content and what it means for authentic human creativity",
     content: `I'm pro-AI. Let me be clear about that from the start. Tools like OpenAI's Sora 2—which just dropped on September 30th, 2025—are nothing short of remarkable. The ability to generate photorealistic videos with synchronized sound, dialogue, and physics that actually make sense? That's the kind of technological leap that changes entire industries overnight. They're calling it "the GPT-3.5 moment for video," and honestly, that's not hyperbole.
@@ -78,6 +78,75 @@ The question is: will we choose to?`,
     date: "2025-10-03",
   },
   {
+    id: 12,
+    title: "Lessons from Sun Zhu",
+    excerpt: "Don't say to much",
+    content: `Because you don't have to. ;)`,
+    date: "2025-04-17",
+  },
+  {
+    id: 11,
+    title: "Honor",
+    excerpt: "truth matters, especially about yourself",
+    content: `Honor and your reputation are among the most important non-tangible qualities about yourself
+    that should be valued and cherished at all costs. 
+    Because if the the truth doesn't matter than you aren't shit.
+    And if you think you are the shit then you protect your honor.
+    And therefore, you never lie.
+    And what is in the past is in the past and you accept and embrace the truth
+
+    So if you catch someone in a lie then you know they will do it again.
+    
+    Fool me once shame on you, fool me twice shame on me (for trusting you twice).
+    Caught someone lying to me just now, shame on me.
+
+    Make sure to make sure you are someone that matters
+    and that your word means something.
+
+    And if you do lie to someone, try to always clear it up. Even if it was a lie that had good intentions 
+    or especially if it was to bait them. If you can protect anyone it should be yourself.`,
+    date: "2025-04-16",
+  },
+  {
+    id: 10,
+    title: "Concise Guide to AI Agents",
+    excerpt: "Key agentic AI concepts, use cases and considerations to drive ROI",
+    content: `AI agents are programs that can perform tasks independently using ai. They can boost productivity by handling operations through data access enabled.
+    They can be specialized and assembled to work in teams for different divisions, essentially automating workflows.
+    This is benefical because it saves firms costs, while being able to ship products faster. 
+
+    How Agents Work?
+    1. Sensing: Defining the problem, gathering data
+    2. Reasoning: Interpreting the data, context, and requirements to make the decision
+    3. Planning: Developing plan of action to reach required goal
+    4. Coordination: Making sure the plan is aligned with managers
+    5. Acting: Execution
+    6. Learning and adaptation: Assessing outcomes, incorperating feedback, refinement
+    
+    Tomorrow: RAG vector search retrieval tool deep dive`,
+    date: "2025-04-10",
+  },
+  {
+    id: 9,
+    title: "Priorities",
+    excerpt: "pebbles and sand",
+    content: `I usually start my days putting in hard work with the plan I created the day (night) prior.
+    I grind for around 4-5 hours on days where I don't have classes. 
+    This could be anything really, learning new skills, working on passion projects, leetcode problems or just studying.
+    Now that finals are coming up, I have been really working on my efficiency with balancing everything on my plate.
+    Making sure I am getting enough rest, exercise, and diet because health is wealth.
+    
+    Whole time making sure I am staying consistent with my diet and lifting.
+    I've been eating high protein, no carbs, lots of fruits and vegetables, no snacks or processed foods.
+    I really feel like putting the pebbles in the jar first is important which is why I start off with the most mentally straining activities before moving onto the physcial stuff.
+    That way I can get everything I want to do in the day done before I can choose what to do in my free time.
+    NBA games are getting better, music, seeing friends, or just going on walks.
+
+    Picked up stretching and yoga recently and I feel so much better.
+    Going to start working on my posture this week.`,
+    date: "2025-04-09",
+  },
+  {
     id: 8,
     title: "On the Greats",
     excerpt: "Lebron",
@@ -96,7 +165,9 @@ Always think positive.
 
 Change what you can change, ignore what you can't.
 Closed mouths do not get fed. Opportunities do not fall off trees.
-Stay hungry, stay focused, stay active.`,
+Stay hungry, stay focused, stay active.
+
+Going to try to become consistent with these blog posts to help keep myself accountable.`,
     date: "2025-04-08",
   },
   {
