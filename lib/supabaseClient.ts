@@ -10,7 +10,7 @@ if (!supabaseUrl || !supabaseAnonKey) {
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 export async function getBlogPosts() {
-  const { data, error } = await supabase.from("blog_posts").select("*").order("created_at", { ascending: false })
+  const { data, error } = await supabase.from("blog_posts").select("*").order("date", { ascending: false })
 
   if (error) {
     console.error("Error fetching blog posts:", error)
