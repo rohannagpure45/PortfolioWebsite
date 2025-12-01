@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         */}
         <footer className="bg-white/80 backdrop-blur-md mt-20 py-6 border-t border-gray-200">
           <div className="container mx-auto px-4 text-center text-gray-500">
-            <p>© {new Date().getFullYear()} Rohan Nagpure. All rights reserved.</p>
+            <p>© 2025 Rohan Nagpure. All rights reserved.</p>
           </div>
         </footer>
       </body>
