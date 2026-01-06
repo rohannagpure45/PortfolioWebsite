@@ -4,7 +4,7 @@ const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY
 const ALPHA_VANTAGE_API_URL = "https://www.alphavantage.co/query"
 
 export async function GET() {
-  const symbols = ["GOOGL", "META", "NVDA", "ASTS", "AAPL", "GS", "TSLA", "MSFT"]
+  const symbols = ["GOOGL", "META", "NVDA", "ASTS", "AAPL", "GS", "TSLA", "MSFT", "MU", "TSM"]
 
   try {
     const stockData = await Promise.all(
@@ -40,6 +40,8 @@ function getCompanyName(symbol: string): string {
     GS: "Goldman Sachs",
     TSLA: "Tesla",
     MSFT: "Microsoft",
+    MU: "Micron Technology",
+    TSM: "TSMC",
   }
   return companies[symbol] || symbol
 }
