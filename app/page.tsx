@@ -80,6 +80,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="container mx-auto px-4 mb-8">
+        <div className="py-12 px-8 hover:bg-gray-50/50 transition-colors duration-500 rounded-lg">
+          <div className="flex items-stretch gap-8">
+            {/* Gradient accent line */}
+            <div className="w-1 bg-gradient-to-b from-blue-400 to-cyan-400 rounded-full flex-shrink-0" />
+            
+            {/* Content */}
+            <div className="flex-1">
+              <p className="text-xs font-medium tracking-[0.2em] text-gray-400 uppercase mb-3">
+                Software Consulting
+              </p>
+              
+              <h3 className="font-serif text-2xl md:text-3xl text-gray-900 mb-2">
+                Unbounded Scaling LLC
+              </h3>
+              
+              <p className="text-gray-600 mb-6 max-w-xl">
+                Custom software solutions, built right.
+              </p>
+              
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                <a 
+                  href="tel:6093756850" 
+                  className="font-mono text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                  (609) 375-6850
+                </a>
+                <span className="text-gray-300">·</span>
+                <a 
+                  href="mailto:rohannagpure23@gmail.com" 
+                  className="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center gap-1 group"
+                >
+                  rohannagpure23@gmail.com
+                  <svg 
+                    className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Welcome Text Section */}
       <div className="container mx-auto px-4 mb-8">
         <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6">
