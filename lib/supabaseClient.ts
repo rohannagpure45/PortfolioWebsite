@@ -4,13 +4,33 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 // Only create the client if environment variables are present
-export const supabase = (supabaseUrl && supabaseAnonKey) 
-  ? createClient(supabaseUrl, supabaseAnonKey) 
+export const supabase = (supabaseUrl && supabaseAnonKey)
+  ? createClient(supabaseUrl, supabaseAnonKey)
   : null
 
 // Local backup posts - used as fallback if Supabase is unavailable
 // Using negative IDs to avoid conflicts with real database IDs
 const localBackupPosts = [
+  {
+    id: -7,
+    title: "The Singularity Has a Construction Schedule",
+    excerpt: "The singularity isn't a vague future concept anymore—it's breaking ground in New York, raising billions for GPUs, and mass-producing robots in China. The future is arriving ahead of schedule.",
+    content: `The singularity has moved from the realm of science fiction to the mundane reality of construction permits and purchase orders. If you're still waiting for a "flash of light" moment, you're missing the concrete trucks pouring the foundation.
+
+In upstate New York, Micron is breaking ground on a "Megafab" that represents the largest private investment in state history. This $100 billion project isn't just a factory; it is a dedicated organ for the silicon intelligence being birthed. The scale is industrial, heavy, and undeniable.
+
+Simultaneously, the hunger for compute has become voracious. Lambda, a cloud provider, is raising $350 million just to buy more Nvidia GPUs. The capital markets are no longer speculating on "if" AI will scale; they are financing the raw caloric intake required for it to do so.
+
+And the timelines are compressing. Sam Altman, speaking with the confidence of someone checking a delivery schedule, recently stated that OpenAI will have a "legitimate AI researcher" — a fully automated system capable of novelty — by 2028. That is barely two years away. We aren't talking about better chatbots; we are talking about the automation of the scientific method itself.
+
+Meanwhile, in China, the physical avatar of this intelligence is already walking off the assembly line. Chinese firms dominated global humanoid robot shipments in 2025, deploying over 13,000 units while US competitors shipped mere hundreds. The robot workers are here, they are affordable, and they are being deployed at scale.
+
+The human cost of this acceleration is already visible. The Wall Street Journal reports a "downside" to the automation of boring tasks: the disappearance of the training ground. Junior roles, once the safe harbor for learning, are evaporating. The "joyless tech revolution" isn't punishing us with Terminators; it's punishing us with a lack of entry-level purpose.
+
+We are not sleepwalking into the future. We are building it, financing it, and shipping it, faster than our social intuitions can update. The singularity isn't coming. It's under construction.`,
+    date: "2026-01-09",
+    slug: "singularity-construction-schedule"
+  },
   {
     id: -6,
     title: "Capital Flows Tell the Story: AI Infrastructure Is the New Foundation",
@@ -123,7 +143,7 @@ export async function getBlogPosts() {
       // Return data even if empty - this is a successful query result
       return data
     }
-    
+
     if (error) {
       console.error("Error fetching blog posts from Supabase:", error)
     }
