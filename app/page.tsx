@@ -79,7 +79,7 @@ export default function Home() {
           >
             Building the Future
             <br />
-            <span className="text-[#d97757]" style={{ letterSpacing: '0' }}>of Finance</span>
+            <span className="text-[#d97757] inline-block mt-4" style={{ letterSpacing: '0' }}>of Finance</span>
           </h1>
 
           <p className="text-xl text-[#b0aea5] mb-12 max-w-xl mx-auto leading-relaxed">
