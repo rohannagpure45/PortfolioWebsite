@@ -35,6 +35,18 @@ export default function Home() {
   const [positions, setPositions] = useState<StockPosition[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!hasScrolled && window.scrollY > 0) {
+        setHasScrolled(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [hasScrolled]);
 
   useEffect(() => {
     async function fetchStockData() {
@@ -79,7 +91,7 @@ export default function Home() {
           >
             Building the Future
             <br />
-            <span className="text-[#d97757] inline-block mt-4" style={{ letterSpacing: '0' }}>of Finance</span>
+            <span className="text-[#d97757] inline-block mt-2" style={{ letterSpacing: '0' }}>of Finance</span>
           </h1>
 
           <p className="text-xl text-[#b0aea5] mb-12 max-w-xl mx-auto leading-relaxed">
@@ -102,7 +114,10 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div
+          className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-700 ease-out ${hasScrolled ? 'opacity-0 translate-y-4 pointer-events-none' : 'opacity-100 translate-y-0'
+            }`}
+        >
           <div className="w-6 h-10 rounded-full border-2 border-[#b0aea5]/30 flex justify-center pt-2">
             <div className="w-1 h-2 bg-[#b0aea5]/50 rounded-full animate-pulse-subtle" />
           </div>
@@ -222,6 +237,7 @@ export default function Home() {
                                 width={24}
                                 height={24}
                                 className="object-contain"
+                                style={{ width: 'auto', height: 'auto' }}
                               />
                             </div>
                             <a
