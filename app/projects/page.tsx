@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -41,7 +42,64 @@ const projects = [
   },
 ];
 
+// Card content component to avoid duplication
+function ProjectCardContent({ project }: { project: typeof projects[0] }) {
+  return (
+    <>
+      {/* Image with overlay */}
+      <div className="relative h-56 overflow-hidden">
+        <Image
+          src={project.image || "/placeholder.svg"}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-500 
+                     group-hover:scale-105"
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141413] via-[#141413]/60 to-transparent" />
+
+        {/* Tags overlay */}
+        <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
+          {project.tags?.map((tag) => (
+            <span
+              key={tag}
+              className="badge text-xs"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-6">
+        <h2 className="text-xl font-semibold text-[#faf9f5] mb-3 
+                       group-hover:text-[#d97757] transition-colors">
+          {project.title}
+        </h2>
+        <p className="text-[#b0aea5] mb-4 line-clamp-3">
+          {project.description}
+        </p>
+        <span className="text-[#d97757] font-medium inline-flex items-center gap-2 
+                         group-hover:gap-3 transition-all">
+          Explore Project
+          <svg
+            className="w-4 h-4 transition-transform group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </span>
+      </div>
+    </>
+  );
+}
+
 export default function Projects() {
+  const cardClassName = "group relative overflow-hidden rounded-2xl card-elevated transition-all duration-300 hover-lift cursor-pointer";
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -61,64 +119,29 @@ export default function Projects() {
       {/* Project Cards Grid */}
       <div className="container mx-auto px-6 py-16">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <a
-              key={project.id}
-              href={project.link}
-              target={project.link.startsWith("http") ? "_blank" : undefined}
-              rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group relative overflow-hidden rounded-2xl card-elevated
-                         transition-all duration-300 hover-lift cursor-pointer"
-            >
-              {/* Image with overlay */}
-              <div className="relative h-56 overflow-hidden">
-                <Image
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-500 
-                             group-hover:scale-105"
-                />
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#141413] via-[#141413]/60 to-transparent" />
+          {projects.map((project) => {
+            const isExternal = project.link.startsWith("http");
 
-                {/* Tags overlay */}
-                <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-                  {project.tags?.map((tag) => (
-                    <span
-                      key={tag}
-                      className="badge text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <h2 className="text-xl font-semibold text-[#faf9f5] mb-3 
-                               group-hover:text-[#d97757] transition-colors">
-                  {project.title}
-                </h2>
-                <p className="text-[#b0aea5] mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-                <span className="text-[#d97757] font-medium inline-flex items-center gap-2 
-                                 group-hover:gap-3 transition-all">
-                  Explore Project
-                  <svg
-                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-              </div>
-            </a>
-          ))}
+            return isExternal ? (
+              <a
+                key={project.id}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cardClassName}
+              >
+                <ProjectCardContent project={project} />
+              </a>
+            ) : (
+              <Link
+                key={project.id}
+                href={project.link}
+                className={cardClassName}
+              >
+                <ProjectCardContent project={project} />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
