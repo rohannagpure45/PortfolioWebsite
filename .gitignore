@@ -30,3 +30,11 @@ PortfolioWebsite-1/
 
 
 mcp.json
+.disabled/
+
+
+# mac
+.DS_Store
+
+# agent
+.agent/
