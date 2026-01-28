@@ -343,6 +343,30 @@ Strategies for navigating volatile markets include diversification, maintaining 
   }
 ]
 
+export async function getBlogPostBySlug(slug: string) {
+  // Try to fetch from Supabase first
+  if (supabase) {
+    const { data, error } = await supabase
+      .from("blog_posts")
+      .select("*")
+      .eq("slug", slug)
+      .single()
+
+    if (!error && data) {
+      return data
+    }
+
+    if (error && error.code !== 'PGRST116') {
+      // PGRST116 = no rows found, which is expected for missing slugs
+      console.error("Error fetching blog post from Supabase:", error)
+    }
+  }
+
+  // Fallback to local backup
+  const post = localBackupPosts.find(p => p.slug === slug)
+  return post || null
+}
+
 export async function getBlogPosts() {
   // Try to fetch from Supabase first
   if (supabase) {

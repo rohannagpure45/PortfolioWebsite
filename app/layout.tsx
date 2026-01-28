@@ -14,6 +14,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Rohan Nagpure - Portfolio",
   description: "Personal portfolio and financial blog of Rohan Nagpure",
+  alternates: {
+    types: {
+      "application/rss+xml": "/api/rss",
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

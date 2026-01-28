@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { getBlogPosts } from "@/lib/supabaseClient";
 
 interface BlogPost {
@@ -10,12 +11,9 @@ interface BlogPost {
   content: string;
   date: string;
   slug: string;
-  created_at?: string;
-  updated_at?: string;
 }
 
 export default function Blog() {
-  const [expandedPost, setExpandedPost] = useState<number | null>(null);
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -37,10 +35,6 @@ export default function Blog() {
     fetchPosts();
   }, []);
 
-  const togglePost = (id: number) => {
-    setExpandedPost(expandedPost === id ? null : id);
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -55,6 +49,19 @@ export default function Blog() {
             Insights about financial markets, technology trends, and the
             intersection of computer science and finance.
           </p>
+
+          {/* RSS Feed Link */}
+          <a
+            href="/api/rss"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-6 text-[#d97757] hover:underline text-sm"
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z" />
+            </svg>
+            Subscribe via RSS
+          </a>
         </div>
       </section>
 
@@ -85,15 +92,11 @@ export default function Blog() {
             {blogPosts.map((post) => (
               <article
                 key={post.id}
-                className={`card-elevated overflow-hidden transition-all duration-300
-                           ${expandedPost === post.id ? 'ring-1 ring-[#d97757]/30' : ''}`}
+                className="card-elevated overflow-hidden transition-all duration-300 hover:ring-1 hover:ring-[#d97757]/30"
               >
-                {/* Post Header */}
-                <button
-                  type="button"
-                  className="w-full text-left p-6 cursor-pointer group"
-                  onClick={() => togglePost(post.id)}
-                  aria-expanded={expandedPost === post.id}
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="block p-6 group"
                 >
                   <div className="flex justify-between items-start mb-3">
                     <h2 className="text-xl font-semibold text-[#faf9f5] group-hover:text-[#d97757] transition-colors">
@@ -107,42 +110,13 @@ export default function Blog() {
                     {post.excerpt}
                   </p>
                   <span className="text-[#d97757] font-medium inline-flex items-center gap-2 
-                                     group-hover:gap-3 transition-all">
-                    {expandedPost === post.id ? (
-                      <>
-                        Show less
-                        <svg className="w-4 h-4 rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </>
-                    ) : (
-                      <>
-                        Read more
-                        <svg className="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </>
-                    )}
+                                   group-hover:gap-3 transition-all">
+                    Read more
+                    <svg className="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </span>
-                </button>
-
-                {/* Expanded Content */}
-                <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out
-                              ${expandedPost === post.id ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}
-                >
-                  <div className="px-6 pb-6 border-t border-[#b0aea5]/10">
-                    <div className="pt-6 prose max-w-none">
-                      {post.content.split("\n").map((paragraph, idx) => (
-                        paragraph.trim() && (
-                          <p key={idx} className="text-[#b0aea5] mb-4 leading-relaxed">
-                            {paragraph}
-                          </p>
-                        )
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                </Link>
               </article>
             ))}
           </div>
