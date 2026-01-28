@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "Personal portfolio and financial blog of Rohan Nagpure",
   alternates: {
     types: {
-      "application/rss+xml": "/api/rss",
+      "application/rss+xml": [{ url: "/api/rss", title: "Rohan Nagpure - Blog RSS Feed" }],
     },
   },
 };

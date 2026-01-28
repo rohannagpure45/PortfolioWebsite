@@ -1,9 +1,8 @@
-"use client";
-
-import { useState, useEffect, ReactNode } from "react";
-import { useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getBlogPostBySlug } from "@/lib/supabaseClient";
+import { Metadata } from "next";
+import { getBlogPostBySlug, getBlogPosts } from "@/lib/supabaseClient";
+import { ReactNode } from "react";
 
 interface BlogPost {
     id: number;
@@ -12,6 +11,47 @@ interface BlogPost {
     content: string;
     date: string;
     slug: string;
+}
+
+interface PageProps {
+    params: Promise<{ slug: string }>;
+}
+
+// Generate static params for all blog posts at build time
+export async function generateStaticParams() {
+    const posts = await getBlogPosts();
+    return posts.map((post: BlogPost) => ({
+        slug: post.slug,
+    }));
+}
+
+// Generate dynamic metadata for each blog post
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const post = await getBlogPostBySlug(slug);
+
+    if (!post) {
+        return {
+            title: "Post Not Found",
+            description: "The requested blog post could not be found.",
+        };
+    }
+
+    return {
+        title: `${post.title} | Rohan Nagpure`,
+        description: post.excerpt,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            type: "article",
+            publishedTime: post.date,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description: post.excerpt,
+        },
+    };
 }
 
 // Helper to render content with proper list grouping
@@ -99,77 +139,12 @@ function renderContent(content: string): ReactNode[] {
     return elements;
 }
 
-export default function BlogPostPage() {
-    const params = useParams();
+export default async function BlogPostPage({ params }: PageProps) {
+    const { slug } = await params;
+    const post = await getBlogPostBySlug(slug);
 
-    // Safely extract slug from params
-    const rawSlug = params?.slug;
-    const slug: string | null =
-        typeof rawSlug === "string" ? rawSlug :
-            Array.isArray(rawSlug) && rawSlug.length > 0 ? rawSlug[0] :
-                null;
-
-    const [post, setPost] = useState<BlogPost | null>(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    useEffect(() => {
-        const fetchPost = async () => {
-            if (!slug) {
-                setError("Blog post not found");
-                setLoading(false);
-                return;
-            }
-
-            try {
-                setLoading(true);
-                const fetchedPost = await getBlogPostBySlug(slug);
-                if (!fetchedPost) {
-                    setError("Blog post not found");
-                } else {
-                    setPost(fetchedPost);
-                }
-            } catch (err) {
-                setError("Failed to load blog post");
-                console.error("Error fetching blog post:", err);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchPost();
-    }, [slug]);
-
-    if (loading) {
-        return (
-            <div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                    <div className="inline-block w-8 h-8 border-2 border-[#d97757] border-t-transparent rounded-full animate-spin mb-4" />
-                    <p className="text-[#b0aea5]">Loading...</p>
-                </div>
-            </div>
-        );
-    }
-
-    if (error || !post) {
-        return (
-            <div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-2xl font-bold text-[#faf9f5] mb-4">
-                        {error || "Post not found"}
-                    </h1>
-                    <Link
-                        href="/blog"
-                        className="text-[#d97757] hover:underline inline-flex items-center gap-2"
-                    >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                        Back to blog
-                    </Link>
-                </div>
-            </div>
-        );
+    if (!post) {
+        notFound();
     }
 
     return (
