@@ -4,6 +4,16 @@ import { Metadata } from "next";
 import { getBlogPostBySlug, getBlogPosts } from "@/lib/supabaseClient";
 import { ReactNode } from "react";
 
+// Format date from YYYY-MM-DD to "Month Day, Year"
+function formatDate(dateString: string): string {
+    const date = new Date(dateString + "T00:00:00");
+    return date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
+}
+
 interface BlogPost {
     id: number;
     title: string;
@@ -169,7 +179,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                     </h1>
 
                     <p className="text-[#b0aea5]/60">
-                        {post.date}
+                        {formatDate(post.date)}
                     </p>
                 </div>
             </section>
@@ -178,6 +188,11 @@ export default async function BlogPostPage({ params }: PageProps) {
             <article className="container mx-auto px-6 py-16">
                 <div className="max-w-3xl mx-auto">
                     <div className="card-elevated p-8 md:p-12">
+                        {/* Blog Header */}
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-6 mb-6 border-b border-[#3d3d3a]">
+                            <p className="text-[#faf9f5] font-medium">Rohan Nagpure</p>
+                            <p className="text-[#b0aea5] text-sm">{formatDate(post.date)}</p>
+                        </div>
                         <div className="prose max-w-none">
                             {renderContent(post.content)}
                         </div>
