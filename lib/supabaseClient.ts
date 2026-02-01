@@ -15,33 +15,33 @@ const localBackupPosts = [
     id: -18,
     title: "The End of Knowledge Labor",
     excerpt: "I saw it coming. Still not sure what to do about it.",
-    content: `I've been watching the patterns for a while now.
+    content: `I've been watching the patterns for a while.
 
-When GPT-4 dropped, I told people—this is different. This isn't like the last wave of automation that hit factory floors and call centers. This one's coming for the people with degrees. The ones who thought they were safe because they "use their brains."
+When GPT-4 dropped, I told people: this is different. It isn't like the last wave of automation that hit factory floors and call centers. This one is coming for the people with degrees. The ones who thought they were safe because they supposedly use their brains.
 
-Lawyers, accountants, analysts, even software engineers. The work that pays six figures because it requires "expertise" and "judgment." That's exactly what AI is getting good at. Not the physical stuff—the thinking stuff.
+Lawyers, accountants, analysts, even software engineers. The work that pays six figures because it requires expertise and judgment. That is exactly what AI is getting good at. Not the physical stuff. The thinking stuff.
 
 And now here we are. Junior roles are evaporating. Entry-level positions that used to train the next generation are being automated away. The ladder is getting pulled up just as people are trying to climb it.
 
 Meanwhile, my plumber charges $200 for a house call and has a three-week waitlist.
 
-The irony isn't lost on me. We spent decades telling kids to go to college, get a white-collar job, avoid "manual labor." Now the trades—electricians, HVAC techs, welders—are looking like the stable play. You can't outsource a clogged drain to a chatbot.
+The irony isn't lost on me. We spent decades telling kids to go to college, get a white-collar job, avoid manual labor. Now the trades (electricians, HVAC techs, welders) are looking like the stable play. You can't outsource a clogged drain to a chatbot.
 
 I saw this coming. I really did.
 
 And still, I'm hesitating.
 
-There's this voice in my head that says "but you've already invested so much in the knowledge path." The degree, the skills, the identity of being someone who works with information and code. Pivoting feels like admitting defeat, even when the data says otherwise.
+There is this voice in my head saying "but you've already invested so much in the knowledge path." The degree, the skills, the identity of being someone who works with information and code. Pivoting feels like admitting defeat, even when the data says otherwise.
 
-But what's the point of pattern recognition if you ignore the pattern?
+But what represents the point of pattern recognition if you ignore the pattern?
 
-The trades aren't glamorous. They're physical. They require showing up in person, getting your hands dirty. No working from Bali, no tech bro lifestyle.
+The trades aren't glamorous. They're physical. They require showing up in person and getting your hands dirty. No working from Bali, no tech bro lifestyle.
 
-But they're also real. Tangible. Someone needs their electrical panel fixed, you fix it, you get paid. No algorithms deciding your worth, no AI eating your lunch while you sleep.
+But they're also real and tangible. Someone needs their electrical panel fixed, you fix it, you get paid. No algorithms deciding your worth, no AI eating your lunch while you sleep.
 
-I'm not saying everyone should drop out and become an electrician. But I am saying: the old playbook is broken. The "go to college, get a knowledge job, climb the ladder" path that worked for our parents? The AI is rewriting those rules in real-time.
+I'm not saying everyone should drop out and become an electrician. But I am saying the old playbook is broken. The "go to college, get a knowledge job, climb the ladder" path that worked for our parents? The AI is rewriting those rules in real-time.
 
-The question I keep asking myself: am I adapting to the new reality, or am I clinging to the old one because it's comfortable?
+The question I keep asking myself is: am I adapting to the new reality, or am I clinging to the old one because it's comfortable?
 
 Still figuring that out.`,
     date: "2026-01-31",
