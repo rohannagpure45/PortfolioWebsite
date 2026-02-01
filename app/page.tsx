@@ -21,8 +21,8 @@ const companyLogos: Record<string, string> = {
   TSLA: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fAxRCHCgOe5HdYrDoWc9ajj4iyqkw0.png",
   MSFT: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-lNHdtVIvqEwMK5FMcACT56qa5yJyl5.png",
   ASTS: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-f0W38ZttIm7VGOckayQPDWYqijLUjU.png",
-  MU: "/placeholder.svg",
-  TSM: "/placeholder.svg",
+  MU: "https://cdn.freebiesupply.com/logos/thumbs/2x/micron-technology-logo.png",
+  TSM: "https://cdn.freebiesupply.com/logos/thumbs/2x/tsmc-logo.png",
 };
 
 // Stock exchange mapping - NYSE tickers need different exchange
