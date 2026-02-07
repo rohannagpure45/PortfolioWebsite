@@ -546,13 +546,22 @@ export async function getBlogPostBySlug(slug: string) {
 }
 
 export async function getBlogPosts() {
-  // Try to fetch from Supabase first
-  if (supabase) {
-    const { data, error } = await supabase.from("blog_posts").select("*").order("date", { ascending: false })
+  // Always start with local backup posts
+  let posts = [...localBackupPosts]
 
-    if (!error && data) {
-      // Return data even if empty - this is a successful query result
-      return data
+  // Try to fetch from Supabase and merge
+  if (supabase) {
+    const { data: dbPosts, error } = await supabase.from("blog_posts").select("*").order("date", { ascending: false })
+
+    if (!error && dbPosts) {
+      // Merge logic: Use DB posts as primary, add local posts that aren't in the DB by slug
+      const dbSlugs = new Set(dbPosts.map(p => p.slug))
+      const uniqueLocalPosts = localBackupPosts.filter(p => !dbSlugs.has(p.slug))
+
+      posts = [...dbPosts, ...uniqueLocalPosts].sort((a, b) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+      )
+      return posts
     }
 
     if (error) {
@@ -560,7 +569,6 @@ export async function getBlogPosts() {
     }
   }
 
-  // Fallback to local backup only if Supabase client is unavailable or query failed
-  console.warn("Using local backup posts - Supabase unavailable or query failed")
-  return localBackupPosts
+  // Fallback or merged result
+  return posts
 }
