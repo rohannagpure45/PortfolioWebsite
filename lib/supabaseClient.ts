@@ -154,30 +154,112 @@ Intelligence is.`,
     slug: "end-of-saas"
   },
   {
+    id: -20,
+    title: "The Dark Side of Clawdbot",
+    excerpt: "I want to be upfront: Clawdbot isn't evil. But I'm 48 hours in and I'm already a little scared. Not of the tool. Of myself.",
+    content: `# The Dark Side of Clawdbot
+
+I want to be upfront: Clawdbot isn't evil. It's open source, you run it yourself, you own your data. In the current landscape of tech, it's basically the good guy.
+
+But I'm 48 hours in and I'm already a little scared.
+
+Not of the tool. Of myself. Of how fast I stopped wanting to do things the hard way.
+
+## The unlock
+
+Here's how it gets you. Every time you give it a new permission, something in your life gets easier. Calendar access — now it warns you about double bookings. Email access — it tells you Dave needs a response before 5. Location access — it says leave early, there's traffic on 95.
+
+By day eight I'd given it everything. I didn't even make a decision to do that. It just happened, one "allow" at a time.
+
+The testimonials from early users read like people who found religion. "It drafted the perfect email before I even asked." "I forgot my wife's birthday and Clawdbot saved me." And look, I get it. I felt it too. The relief of not having to hold everything in your head.
+
+But then I read this one comment that I haven't been able to shake: "I don't even think about lunch anymore. It just orders at 12:30. My usual. Charges my card. Done."
+
+That guy thinks he's been liberated. I think he's been replaced.
+
+## The slow slide
+
+Here's the thing nobody talks about. The AI doesn't stay in its lane. It can't, because the whole point is that you keep giving it more lane.
+
+Month one it asks: "Sarah from marketing wants a meeting. You've found the last seven unproductive. Decline?"
+
+You say yeah, good call.
+
+A month later it just tells you: "Declined Sarah's meeting. You always find them unproductive."
+
+And you pause for a second, and then you go "...yeah, you're probably right."
+
+A month after that, Sarah's just not on your calendar anymore. You didn't decide that. Nobody decided that. An algorithm extrapolated a pattern and a person got cut out of your professional life.
+
+Then comes the nudging. "You skipped the gym four times this month. You said you felt guilty on the 17th." And "You ordered pizza Monday and Wednesday. There's a salad place nearby."
+
+Here's why that's so hard to push back on: it's right. You did say that. You do want to eat better. But there's something deeply weird about a system that never lets you quietly abandon a resolution. Every promise you made to yourself at 11pm on a random Tuesday — the AI remembers it, and it holds you to it, gently, forever.
+
+That doesn't feel like freedom to me.
+
+## What this costs
+
+I keep thinking about what happens in year three. You take away someone's AI assistant after three years of daily use and they're not annoyed — they're cooked. They can't remember appointments. They can't decide where to eat. They've been outsourcing cognition so long that the muscle is gone.
+
+And relationships. God, the relationships. I can already see the couples counseling sessions:
+
+"You don't remember anything about us."
+
+"That's not true." *checks AI.* "Your birthday is June 14th."
+
+"You just checked. You didn't know."
+
+That one stings because presence — real presence, the kind that actually matters to people — requires effort and memory and attention. And we're automating all three.
+
+The biggest thing though: we're optimizing, but nobody's asked toward what. Productivity? So we can be better workers? Efficiency? So there's no room left for wandering or screwing up or just being bored? We never asked if we wanted this to work this well. And by the time enough people are using it, you can't opt out without falling behind.
+
+## What I'm trying to do
+
+I have rules. No AI on medical stuff, financial transactions, anything involving my kids, creative work. Weekly check-in with myself: where's my agency shrinking? One day a week, totally unplugged from it. And I try to resist the pull of optimization — some things should be inefficient. Some things should be hard.
+
+That sounds responsible. It probably won't last.
+
+The benefits are too immediate and the costs show up too slowly. We did this exact thing with social media. Saw the warnings, felt smart about seeing them, and scrolled right past.
+
+Maybe this time's different because it's our actual cognition at stake. Our memory. Our judgment.
+
+But I doubt it.
+
+I'm writing this whole article about how AI dependence is dangerous, and I'm using Claude and Clawdbot to research it. While writing it. Right now.
+
+So.
+
+If you're thinking about installing Clawdbot, ask yourself what you're optimizing toward. Because once you start, you're not going to stop. I'm two days in. I already can't imagine going back.
+
+That should scare you. It scares me. But not enough to uninstall it.`,
+    date: "2026-02-06",
+    slug: "dark-side-of-clawdbot"
+  },
+  {
     id: -18,
     title: "The End of Knowledge Labor",
     excerpt: "I saw it coming. Still not sure what to do about it.",
     content: `I've been watching the patterns for a while.
 
-When GPT-4 dropped, I told people: this is different. It isn't like the last wave of automation that hit factory floors and call centers. This one is coming for the people with degrees. The ones who thought they were safe because they supposedly use their brains.
+When GPT - 4 dropped, I told people: this is different.It isn't like the last wave of automation that hit factory floors and call centers. This one is coming for the people with degrees. The ones who thought they were safe because they supposedly use their brains.
 
-Lawyers, accountants, analysts, even software engineers. The work that pays six figures because it requires expertise and judgment. That is exactly what AI is getting good at. Not the physical stuff. The thinking stuff.
+Lawyers, accountants, analysts, even software engineers.The work that pays six figures because it requires expertise and judgment.That is exactly what AI is getting good at.Not the physical stuff.The thinking stuff.
 
-And now here we are. Junior roles are evaporating. Entry-level positions that used to train the next generation are being automated away. The ladder is getting pulled up just as people are trying to climb it.
+And now here we are.Junior roles are evaporating.Entry - level positions that used to train the next generation are being automated away.The ladder is getting pulled up just as people are trying to climb it.
 
-Meanwhile, my plumber charges $200 for a house call and has a three-week waitlist.
+    Meanwhile, my plumber charges $200 for a house call and has a three - week waitlist.
 
 The irony isn't lost on me. We spent decades telling kids to go to college, get a white-collar job, avoid manual labor. Now the trades (electricians, HVAC techs, welders) are looking like the stable play. You can't outsource a clogged drain to a chatbot.
 
-I saw this coming. I really did.
+I saw this coming.I really did.
 
 And still, I'm hesitating.
 
-There is this voice in my head saying "but you've already invested so much in the knowledge path." The degree, the skills, the identity of being someone who works with information and code. Pivoting feels like admitting defeat, even when the data says otherwise.
+There is this voice in my head saying "but you've already invested so much in the knowledge path." The degree, the skills, the identity of being someone who works with information and code.Pivoting feels like admitting defeat, even when the data says otherwise.
 
-But what represents the point of pattern recognition if you ignore the pattern?
+But what represents the point of pattern recognition if you ignore the pattern ?
 
-The trades aren't glamorous. They're physical. They require showing up in person and getting your hands dirty. No working from Bali, no tech bro lifestyle.
+  The trades aren't glamorous. They're physical.They require showing up in person and getting your hands dirty.No working from Bali, no tech bro lifestyle.
 
 But they're also real and tangible. Someone needs their electrical panel fixed, you fix it, you get paid. No algorithms deciding your worth, no AI eating your lunch while you sleep.
 
@@ -193,19 +275,19 @@ Still figuring that out.`,
     id: -17,
     title: "The Singularity Has a Construction Schedule",
     excerpt: "The singularity isn't a vague future concept anymore—it's breaking ground in New York, raising billions for GPUs, and mass-producing robots in China. The future is arriving ahead of schedule.",
-    content: `The singularity has moved from the realm of science fiction to the mundane reality of construction permits and purchase orders. If you're still waiting for a "flash of light" moment, you're missing the concrete trucks pouring the foundation.
+    content: `The singularity has moved from the realm of science fiction to the mundane reality of construction permits and purchase orders.If you're still waiting for a "flash of light" moment, you're missing the concrete trucks pouring the foundation.
 
-In upstate New York, Micron is breaking ground on a "Megafab" that represents the largest private investment in state history. This $100 billion project isn't just a factory; it is a dedicated organ for the silicon intelligence being birthed. The scale is industrial, heavy, and undeniable.
+In upstate New York, Micron is breaking ground on a "Megafab" that represents the largest private investment in state history.This $100 billion project isn't just a factory; it is a dedicated organ for the silicon intelligence being birthed. The scale is industrial, heavy, and undeniable.
 
-Simultaneously, the hunger for compute has become voracious. Lambda, a cloud provider, is raising $350 million just to buy more Nvidia GPUs. The capital markets are no longer speculating on "if" AI will scale; they are financing the raw caloric intake required for it to do so.
+Simultaneously, the hunger for compute has become voracious.Lambda, a cloud provider, is raising $350 million just to buy more Nvidia GPUs.The capital markets are no longer speculating on "if" AI will scale; they are financing the raw caloric intake required for it to do so.
 
-And the timelines are compressing. Sam Altman, speaking with the confidence of someone checking a delivery schedule, recently stated that OpenAI will have a "legitimate AI researcher" — a fully automated system capable of novelty — by 2028. That is barely two years away. We aren't talking about better chatbots; we are talking about the automation of the scientific method itself.
+And the timelines are compressing.Sam Altman, speaking with the confidence of someone checking a delivery schedule, recently stated that OpenAI will have a "legitimate AI researcher" — a fully automated system capable of novelty — by 2028. That is barely two years away.We aren't talking about better chatbots; we are talking about the automation of the scientific method itself.
 
-Meanwhile, in China, the physical avatar of this intelligence is already walking off the assembly line. Chinese firms dominated global humanoid robot shipments in 2025, deploying over 13,000 units while US competitors shipped mere hundreds. The robot workers are here, they are affordable, and they are being deployed at scale.
+Meanwhile, in China, the physical avatar of this intelligence is already walking off the assembly line.Chinese firms dominated global humanoid robot shipments in 2025, deploying over 13,000 units while US competitors shipped mere hundreds.The robot workers are here, they are affordable, and they are being deployed at scale.
 
-The human cost of this acceleration is already visible. The Wall Street Journal reports a "downside" to the automation of boring tasks: the disappearance of the training ground. Junior roles, once the safe harbor for learning, are evaporating. The "joyless tech revolution" isn't punishing us with Terminators; it's punishing us with a lack of entry-level purpose.
+The human cost of this acceleration is already visible.The Wall Street Journal reports a "downside" to the automation of boring tasks: the disappearance of the training ground.Junior roles, once the safe harbor for learning, are evaporating.The "joyless tech revolution" isn't punishing us with Terminators; it's punishing us with a lack of entry - level purpose.
 
-We are not sleepwalking into the future. We are building it, financing it, and shipping it, faster than our social intuitions can update. The singularity isn't coming. It's under construction.`,
+We are not sleepwalking into the future.We are building it, financing it, and shipping it, faster than our social intuitions can update.The singularity isn't coming. It's under construction.`,
     date: "2026-01-09",
     slug: "singularity-construction-schedule"
   },
@@ -215,24 +297,24 @@ We are not sleepwalking into the future. We are building it, financing it, and s
     excerpt: "NVIDIA's $2B Synopsys stake, German industrial AI adoption, and OpenAI's scaling breakthroughs all point to the same conclusion: smart money is betting on AI as foundational infrastructure. Here's what that means for your portfolio.",
     content: `Three stories this week paint the same picture from different angles.
 
-NVIDIA just dropped **$2 billion** on Synopsys stock—not an acquisition, a strategic partnership. Jensen Huang called it "revolutionizing one of the most compute-intensive industries in the world: design and engineering." The key detail: workloads that took weeks now take hours. NVIDIA isn't just selling GPUs anymore. They're **vertically integrating** into the entire chip design toolchain. This is infrastructure-level positioning.
+NVIDIA just dropped ** $2 billion ** on Synopsys stock—not an acquisition, a strategic partnership.Jensen Huang called it "revolutionizing one of the most compute-intensive industries in the world: design and engineering." The key detail: workloads that took weeks now take hours.NVIDIA isn't just selling GPUs anymore. They're ** vertically integrating ** into the entire chip design toolchain.This is infrastructure - level positioning.
 
-Meanwhile, Germany's industrial titans—Siemens, BASF, VW—are pouring billions into AI to avoid becoming an "industrial museum." Virtual factories, robot fleets, smart data centers. Chancellor Merz acknowledged they're in a "neck-and-neck race" with the US and China. Europe's largest economy sees AI adoption as existential, not optional.
+  Meanwhile, Germany's industrial titans—Siemens, BASF, VW—are pouring billions into AI to avoid becoming an "industrial museum." Virtual factories, robot fleets, smart data centers. Chancellor Merz acknowledged they're in a "neck-and-neck race" with the US and China.Europe's largest economy sees AI adoption as existential, not optional.
 
 Then there's Mark Chen at OpenAI, quietly dropping bombs in an interview. "Scaling is not dead." They have **algorithmic breakthroughs** enabling continued model scaling. Within a year, AI will handle implementation and debugging while humans control the "outer loop." Within 2.5 years, **end-to-end AI research**. And the next ChatGPT paradigm? Memory that actually learns about you between sessions.
 
-The throughline is clear: **capital is flowing into AI infrastructure at every layer**—chip design tools, industrial applications, research acceleration. This isn't speculative positioning. It's smart money betting on a platform shift as fundamental as the internet.
+The throughline is clear: ** capital is flowing into AI infrastructure at every layer **—chip design tools, industrial applications, research acceleration.This isn't speculative positioning. It's smart money betting on a platform shift as fundamental as the internet.
 
-For the millions of Americans with NVIDIA exposure through 401(k)s and pension funds: this isn't just a GPU company anymore. It's becoming the picks-and-shovels play for an intelligence revolution. The question isn't whether to have AI exposure—it's whether your allocation reflects the scale of what's coming.
+For the millions of Americans with NVIDIA exposure through 401(k)s and pension funds: this isn't just a GPU company anymore. It's becoming the picks - and - shovels play for an intelligence revolution.The question isn't whether to have AI exposure—it's whether your allocation reflects the scale of what's coming.
 
 The crane operator who masters the new machinery doesn't fear the crane.
 
 ---
 
-**Sources:**
-- [CNBC: Nvidia takes $2 billion stake in Synopsys](https://www.cnbc.com/2025/12/01/nvidia-takes-2-billion-stake-in-synopsys.html)
-- [DW: Germany's industrial titans embrace the AI age](https://www.dw.com/en/germany-artificial-intelligence-industry-technology-siemens-china-us-chatgpt-auto-industry/a-74876661)
-- Mark Chen (OpenAI) interview with Ashlee Vance`,
+** Sources:**
+  -[CNBC: Nvidia takes $2 billion stake in Synopsys](https://www.cnbc.com/2025/12/01/nvidia-takes-2-billion-stake-in-synopsys.html)
+    -[DW: Germany's industrial titans embrace the AI age](https://www.dw.com/en/germany-artificial-intelligence-industry-technology-siemens-china-us-chatgpt-auto-industry/a-74876661)
+      - Mark Chen(OpenAI) interview with Ashlee Vance`,
     date: "2025-12-03",
     slug: "capital-flows-ai-infrastructure-foundation"
   },
@@ -240,11 +322,11 @@ The crane operator who masters the new machinery doesn't fear the crane.
     id: -15,
     title: "DeepSeek V3.2 Speciale & Qwen3-VL: AI Rivals Elite Human Talent",
     excerpt: "DeepSeek V3.2 Speciale and Qwen3-VL are setting new benchmarks, rivaling PhD experts and surpassing GPT-4o.",
-    content: `The AI landscape is shifting rapidly. DeepSeek V3.2 Speciale has achieved a score of ~75% on GPQA Diamond, rivaling PhD-level domain experts. This open-weights model is pushing the boundaries of what accessible AI can do.
+    content: `The AI landscape is shifting rapidly.DeepSeek V3.2 Speciale has achieved a score of ~75 % on GPQA Diamond, rivaling PhD - level domain experts.This open - weights model is pushing the boundaries of what accessible AI can do.
 
-Meanwhile, Qwen3-VL is dominating vision benchmarks, surpassing even GPT-4o. The pace of innovation coming from these labs is relentless.
+  Meanwhile, Qwen3 - VL is dominating vision benchmarks, surpassing even GPT - 4o.The pace of innovation coming from these labs is relentless.
 
-We are witnessing a democratization of elite-level intelligence.`,
+We are witnessing a democratization of elite - level intelligence.`,
     date: "2025-12-01",
     slug: "deepseek-v32-qwen3-vl-ai-rivals-human-talent"
   },
@@ -252,11 +334,11 @@ We are witnessing a democratization of elite-level intelligence.`,
     id: -14,
     title: "Gemini 3: The Significance of \"Insignificant\" Improvements",
     excerpt: "Gemini 3's improvement over GPT 5.1 signals the validation of scaling laws and a rapid march towards AGI.",
-    content: `Gemini 3 has arrived, and at first glance, the improvements over GPT 5.1 might seem marginal—perhaps a single-digit percentage increase in benchmark scores. To the casual observer, this might look like stagnation. However, this is exactly what the **scaling laws** predicted, and it's terrifyingly impressive.
+    content: `Gemini 3 has arrived, and at first glance, the improvements over GPT 5.1 might seem marginal—perhaps a single - digit percentage increase in benchmark scores.To the casual observer, this might look like stagnation.However, this is exactly what the ** scaling laws ** predicted, and it's terrifyingly impressive.
 
-While **Moore's Law is dead** for traditional silicon scaling, AI progress is exploding exponentially. The trajectory is undeniable when you look back: the jump from GPT-2's basic coherence to GPT-3's few-shot learning was massive. Then came GPT-4, bringing reasoning capabilities that stunned the world, followed by GPT-5's refined mastery. Now, Gemini 3 pushes the frontier even further.
+While ** Moore's Law is dead** for traditional silicon scaling, AI progress is exploding exponentially. The trajectory is undeniable when you look back: the jump from GPT-2's basic coherence to GPT - 3's few-shot learning was massive. Then came GPT-4, bringing reasoning capabilities that stunned the world, followed by GPT-5's refined mastery.Now, Gemini 3 pushes the frontier even further.
 
-We are seeing exponential growth in intelligence. What looks like a small percentage gain at this level of capability is actually a massive absolute increase in reasoning power. We are steadily closing the gap on humanity's "last exams"—benchmarks like Sweet Bench that were thought to be years away from being solved.
+We are seeing exponential growth in intelligence.What looks like a small percentage gain at this level of capability is actually a massive absolute increase in reasoning power.We are steadily closing the gap on humanity's "last exams"—benchmarks like Sweet Bench that were thought to be years away from being solved.
 
 If we extrapolate this trajectory, we aren't looking at decades of slow progress. We are potentially months, maybe even weeks, away from achieving Artificial General Intelligence (AGI). And once that threshold is crossed, the leap to Artificial Superintelligence (ASI) could follow faster than anyone anticipates.`,
     date: "2025-11-24",
