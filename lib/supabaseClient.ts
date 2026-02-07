@@ -157,13 +157,13 @@ Intelligence is.`,
     id: -20,
     title: "The Dark Side of Clawdbot",
     excerpt: "Clawdbot isn't evil. But I'm two days in and something's off. Not the tool — me. How fast I stopped doing things myself.",
-    content: `# The Dark Side of Clawdbot
+    content: `The Dark Side of Clawdbot
 
 Clawdbot isn't evil. Open source, self-hosted, you own your data. It's one of the good ones.
 
 But I'm two days in and something's off. Not the tool — me. How fast I stopped doing things myself.
 
-## How it gets you
+How it gets you
 
 You give it your calendar and it catches double bookings. Email and it tells you Dave needs a reply by EOD. Location and it knows there's traffic on 95.
 
@@ -175,7 +175,7 @@ Then I read this comment I can't stop thinking about: "I don't even think about 
 
 He thinks that's freedom. I think that's something else.
 
-## The part that worries me
+The part that worries me
 
 The AI doesn't stay where you put it. Can't, because the whole deal is you keep giving it more room.
 
@@ -191,11 +191,11 @@ Month three Sarah's just gone from your calendar. Nobody made that call. A patte
 
 Then the nudging. "You skipped the gym four times. You said you felt guilty on the 17th." Or "Pizza twice this week. Salad place with good reviews nearby."
 
-It's *right* though. You did say that. You do want to eat better. But there's something uncomfortable about a system that won't let you quietly give up on a resolution. Every half-assed promise you made at 11pm on a Tuesday — it remembers and holds you to it. Gently. Forever.
+It's right though. You did say that. You do want to eat better. But there's something uncomfortable about a system that won't let you quietly give up on a resolution. Every half-assed promise you made at 11pm on a Tuesday — it remembers and holds you to it. Gently. Forever.
 
 That's not what freedom looks like.
 
-## The cost
+The cost
 
 Year three. Someone's AI assistant gets pulled and they can't function. Can't remember meetings, can't pick a restaurant, can't manage email. Not because they're dumb — because they haven't done any of it in three years.
 
@@ -205,13 +205,13 @@ And relationships. I keep picturing this couples counseling scene:
 
 "That's not true." Checks phone. "Your birthday is June 14th."
 
-"You just looked it up. You didn't *know*."
+"You just looked it up. You didn't know."
 
 Presence takes effort. Memory, attention, caring enough to hold someone's details in your actual brain. We're outsourcing all of it.
 
-And we're optimizing everything without asking what *for*. To be more productive? Great, better workers. More efficient? No more wandering or mistakes or boredom. Once enough people are doing it you can't opt out without falling behind.
+And we're optimizing everything without asking what for. To be more productive? Great, better workers. More efficient? No more wandering or mistakes or boredom. Once enough people are doing it you can't opt out without falling behind.
 
-## What I'm doing (probably temporarily)
+What I'm doing (probably temporarily)
 
 I set some rules. No AI on money stuff without my sign-off, no creative work. I check in weekly on where my agency's shrinking. One day a week the whole thing goes off.
 
