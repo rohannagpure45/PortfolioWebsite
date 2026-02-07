@@ -232,7 +232,7 @@ So.
 If you're thinking about installing Clawdbot, ask yourself what you're optimizing toward. Because once you start, you're not going to stop. I'm two days in. I already can't imagine going back.
 
 That should scare you. It scares me. But not enough to uninstall it.`,
-    date: "2026-02-06",
+    date: "2026-01-27",
     slug: "dark-side-of-clawdbot"
   },
   {
