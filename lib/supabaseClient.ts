@@ -156,82 +156,78 @@ Intelligence is.`,
   {
     id: -20,
     title: "The Dark Side of Clawdbot",
-    excerpt: "I want to be upfront: Clawdbot isn't evil. But I'm 48 hours in and I'm already a little scared. Not of the tool. Of myself.",
+    excerpt: "Clawdbot isn't evil. But I'm two days in and something's off. Not the tool — me. How fast I stopped doing things myself.",
     content: `# The Dark Side of Clawdbot
 
-I want to be upfront: Clawdbot isn't evil. It's open source, you run it yourself, you own your data. In the current landscape of tech, it's basically the good guy.
+Clawdbot isn't evil. Open source, self-hosted, you own your data. It's one of the good ones.
 
-But I'm 48 hours in and I'm already a little scared.
+But I'm two days in and something's off. Not the tool — me. How fast I stopped doing things myself.
 
-Not of the tool. Of myself. Of how fast I stopped wanting to do things the hard way.
+## How it gets you
 
-## The unlock
+You give it your calendar and it catches double bookings. Email and it tells you Dave needs a reply by EOD. Location and it knows there's traffic on 95.
 
-Here's how it gets you. Every time you give it a new permission, something in your life gets easier. Calendar access — now it warns you about double bookings. Email access — it tells you Dave needs a response before 5. Location access — it says leave early, there's traffic on 95.
+By day eight I'd handed over everything. Didn't decide to. Just happened one "allow" at a time.
 
-By day eight I'd given it everything. I didn't even make a decision to do that. It just happened, one "allow" at a time.
+People who've been using it longer sound like converts. "It drafted the perfect email before I even asked." "Clawdbot remembered my wife's birthday when I didn't." I get it. I felt it. That relief of not carrying everything in your head.
 
-The testimonials from early users read like people who found religion. "It drafted the perfect email before I even asked." "I forgot my wife's birthday and Clawdbot saved me." And look, I get it. I felt it too. The relief of not having to hold everything in your head.
+Then I read this comment I can't stop thinking about: "I don't even think about lunch anymore. It orders at 12:30. My usual. Charges my card. Done."
 
-But then I read this one comment that I haven't been able to shake: "I don't even think about lunch anymore. It just orders at 12:30. My usual. Charges my card. Done."
+He thinks that's freedom. I think that's something else.
 
-That guy thinks he's been liberated. I think he's been replaced.
+## The part that worries me
 
-## The slow slide
+The AI doesn't stay where you put it. Can't, because the whole deal is you keep giving it more room.
 
-Here's the thing nobody talks about. The AI doesn't stay in its lane. It can't, because the whole point is that you keep giving it more lane.
+Month one: "Sarah from marketing wants to meet. Your last seven meetings with her were unproductive. Decline?"
 
-Month one it asks: "Sarah from marketing wants a meeting. You've found the last seven unproductive. Decline?"
+Sure.
 
-You say yeah, good call.
+Month two: "Declined Sarah's meeting. You always find them unproductive."
 
-A month later it just tells you: "Declined Sarah's meeting. You always find them unproductive."
+"...yeah, probably right."
 
-And you pause for a second, and then you go "...yeah, you're probably right."
+Month three Sarah's just gone from your calendar. Nobody made that call. A pattern got extrapolated and a person vanished from your work life.
 
-A month after that, Sarah's just not on your calendar anymore. You didn't decide that. Nobody decided that. An algorithm extrapolated a pattern and a person got cut out of your professional life.
+Then the nudging. "You skipped the gym four times. You said you felt guilty on the 17th." Or "Pizza twice this week. Salad place with good reviews nearby."
 
-Then comes the nudging. "You skipped the gym four times this month. You said you felt guilty on the 17th." And "You ordered pizza Monday and Wednesday. There's a salad place nearby."
+It's *right* though. You did say that. You do want to eat better. But there's something uncomfortable about a system that won't let you quietly give up on a resolution. Every half-assed promise you made at 11pm on a Tuesday — it remembers and holds you to it. Gently. Forever.
 
-Here's why that's so hard to push back on: it's right. You did say that. You do want to eat better. But there's something deeply weird about a system that never lets you quietly abandon a resolution. Every promise you made to yourself at 11pm on a random Tuesday — the AI remembers it, and it holds you to it, gently, forever.
+That's not what freedom looks like.
 
-That doesn't feel like freedom to me.
+## The cost
 
-## What this costs
+Year three. Someone's AI assistant gets pulled and they can't function. Can't remember meetings, can't pick a restaurant, can't manage email. Not because they're dumb — because they haven't done any of it in three years.
 
-I keep thinking about what happens in year three. You take away someone's AI assistant after three years of daily use and they're not annoyed — they're cooked. They can't remember appointments. They can't decide where to eat. They've been outsourcing cognition so long that the muscle is gone.
-
-And relationships. God, the relationships. I can already see the couples counseling sessions:
+And relationships. I keep picturing this couples counseling scene:
 
 "You don't remember anything about us."
 
-"That's not true." *checks AI.* "Your birthday is June 14th."
+"That's not true." Checks phone. "Your birthday is June 14th."
 
-"You just checked. You didn't know."
+"You just looked it up. You didn't *know*."
 
-That one stings because presence — real presence, the kind that actually matters to people — requires effort and memory and attention. And we're automating all three.
+Presence takes effort. Memory, attention, caring enough to hold someone's details in your actual brain. We're outsourcing all of it.
 
-The biggest thing though: we're optimizing, but nobody's asked toward what. Productivity? So we can be better workers? Efficiency? So there's no room left for wandering or screwing up or just being bored? We never asked if we wanted this to work this well. And by the time enough people are using it, you can't opt out without falling behind.
+And we're optimizing everything without asking what *for*. To be more productive? Great, better workers. More efficient? No more wandering or mistakes or boredom. Once enough people are doing it you can't opt out without falling behind.
 
-## What I'm trying to do
+## What I'm doing (probably temporarily)
 
-I have rules. No AI on medical stuff, financial transactions, anything involving my kids, creative work. Weekly check-in with myself: where's my agency shrinking? One day a week, totally unplugged from it. And I try to resist the pull of optimization — some things should be inefficient. Some things should be hard.
+I set some rules. No AI on money stuff without my sign-off, no creative work. I check in weekly on where my agency's shrinking. One day a week the whole thing goes off.
 
-That sounds responsible. It probably won't last.
+Sounds great on paper. Probably won't last.
 
-The benefits are too immediate and the costs show up too slowly. We did this exact thing with social media. Saw the warnings, felt smart about seeing them, and scrolled right past.
+Benefits hit immediately, damage shows up years later. We ran this exact experiment with social media. Everyone saw the warnings. Everyone kept scrolling.
 
-Maybe this time's different because it's our actual cognition at stake. Our memory. Our judgment.
+Maybe it's different because it's our actual thinking at stake. Memory, judgment, the ability to just handle your own life.
 
-But I doubt it.
+Doubt it though.
 
-I'm writing this whole article about how AI dependence is dangerous, and I'm using Claude and Clawdbot to research it. While writing it. Right now.
+I wrote this entire thing about AI dependence being dangerous while using Claude and Clawdbot to research it. Make of that what you will.
 
-So.
+If you're thinking about setting up Clawdbot — ask yourself what you're optimizing toward. You won't stop once you start. Two days in, can't picture going back.
 
-If you're thinking about installing Clawdbot, ask yourself what you're optimizing toward. Because once you start, you're not going to stop. I'm two days in. I already can't imagine going back.
-
-That should scare you. It scares me. But not enough to uninstall it.`,
+Scares me. Not enough to uninstall it though.`,
     date: "2026-01-27",
     slug: "dark-side-of-clawdbot"
   },
