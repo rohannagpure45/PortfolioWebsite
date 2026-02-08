@@ -163,7 +163,7 @@ Clawdbot isn't evil. Open source, self-hosted, you own your data. It's one of th
 
 But I'm two days in and something's off. Not the tool — me. How fast I stopped doing things myself.
 
-How it gets you
+**How it gets you**
 
 You give it your calendar and it catches double bookings. Email and it tells you Dave needs a reply by EOD. Location and it knows there's traffic on 95.
 
@@ -175,7 +175,7 @@ Then I read this comment I can't stop thinking about: "I don't even think about 
 
 He thinks that's freedom. I think that's something else.
 
-The part that worries me
+**The part that worries me**
 
 The AI doesn't stay where you put it. Can't, because the whole deal is you keep giving it more room.
 
@@ -195,7 +195,7 @@ It's right though. You did say that. You do want to eat better. But there's some
 
 That's not what freedom looks like.
 
-The cost
+**The cost**
 
 Year three. Someone's AI assistant gets pulled and they can't function. Can't remember meetings, can't pick a restaurant, can't manage email. Not because they're dumb — because they haven't done any of it in three years.
 
@@ -211,7 +211,7 @@ Presence takes effort. Memory, attention, caring enough to hold someone's detail
 
 And we're optimizing everything without asking what for. To be more productive? Great, better workers. More efficient? No more wandering or mistakes or boredom. Once enough people are doing it you can't opt out without falling behind.
 
-What I'm doing (probably temporarily)
+**What I'm doing (probably temporarily)**
 
 I set some rules. No AI on money stuff without my sign-off, no creative work. I check in weekly on where my agency's shrinking. One day a week the whole thing goes off.
 
