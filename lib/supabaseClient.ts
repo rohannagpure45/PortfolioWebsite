@@ -15,17 +15,17 @@ const localBackupPosts = [
     id: -19,
     title: "The End of SaaS (I Told You So)",
     excerpt: "HubSpot down 51%. Salesforce down 31%. The market is finally pricing in what I started saying when Figma filed to go public: SaaS as a category is over. The future is AI-native, not another tab in your browser.",
-    content: `For a decade, “SaaS” was the answer to every question.
+    content: `For a decade, "SaaS" was the answer to every question.
 
 If you had a business process, there was a SaaS tool for it. Sales? HubSpot. Marketing? Salesforce, Marketo, take your pick. Collaboration? Figma, Notion, Asana. The playbook was simple: pick a vertical, ship a web app, charge per seat, spend the profits on paid ads and sales reps.
 
-Then Figma filed to go public in 2024 and something about that moment felt like a top to me.
+Then Figma went public in July 2025 and something about that moment felt like a top to me.
 
 Not because Figma was bad. Figma was too good. It was the final boss of SaaS: a clean, fast, viral browser app that completely owned its category. When you see the best possible version of a model, you should ask a different question:
 
 What comes after this?
 
-I looked at Figma IPO headlines and did not just see “design SaaS wins.” I saw the last clean chapter of the SaaS era. Underneath all the pretty UIs, something else was already growing: general purpose intelligence that does not care about your feature roadmap.
+I looked at Figma IPO headlines and did not just see "design SaaS wins." I saw the last clean chapter of the SaaS era. Underneath all the pretty UIs, something else was already growing: general purpose intelligence that does not care about your feature roadmap.
 
 One thing I learned from my time at Link Ventures, basically being a 10x SWE there, is that AI is going to kill a lot of SaaS. Not overnight, but in the way the internet killed a lot of newspapers. Slowly at first, then suddenly once the market accepts the new default.
 
@@ -33,13 +33,13 @@ One thing I learned from my time at Link Ventures, basically being a 10x SWE the
 
 The market is finally catching up.
 
-Look at 2025 and 2026.
+Look at 2025 and early 2026.
 
-- HubSpot is down 51% even though they are still growing revenue around 18–20 percent a year.
-- Salesforce is down 31%.
-- Monday.com is down 36%.
-- Adobe is down 35%.
-- ServiceNow is down 26%.
+- HubSpot is down 42% even though they are still growing revenue around 18–20 percent a year.
+- Salesforce is down 48% from its peak.
+- Monday.com is down 60%.
+- Adobe is down 52% from its peak.
+- ServiceNow is down significantly.
 
 These are not trash companies. These are mature, high margin, category defining SaaS names that the market used to treat like untouchable compounders.
 
@@ -49,15 +49,15 @@ AI stopped being a feature and started becoming a replacement.
 
 OpenAI did not just ship a nicer chatbot. They started shipping apps: an Inbound Sales Assistant, a GTM Assistant, and more. Those aim straight at the workflows that made HubSpot and friends billions.
 
-Anthropic pushes a new Claude Opus update and CNN runs a headline about “the AI that spooked the stock market.” People are not crazy for reacting. For the first time it is believable that a horizontal AI system can eat whole SaaS categories instead of just plugging into them.
+Anthropic pushes a new Claude Opus update and CNN runs a headline about "the AI that spooked the stock market." People are not crazy for reacting. For the first time it is believable that a horizontal AI system can eat whole SaaS categories instead of just plugging into them.
 
 ---
 
 Now look at the other side of the board in 2025:
 
-- Palantir is up 142%.
-- Cloudflare is up 80%.
-- MongoDB is up 70%.
+- Palantir had massive gains, up over 300% at one point before pulling back.
+- Cloudflare is up 75%.
+- MongoDB is up 24%.
 
 These are not simple dashboards. They are infrastructure and data platforms that get more valuable as AI gets stronger. They sit closer to the new center of gravity: compute, data, security, orchestration.
 
@@ -65,7 +65,7 @@ Meanwhile, the classic SMB SaaS setup, where you log into some app and click aro
 
 So yeah, my view is that SaaS as a pure category is dying.
 
-Software is not going anywhere. But the idea of “we build a web app, you log in, and you manually walk it to the finish line” does not make sense in a world where an AI can:
+Software is not going anywhere. But the idea of "we build a web app, you log in, and you manually walk it to the finish line" does not make sense in a world where an AI can:
 
 1. Read your CRM.
 2. Draft the email.
@@ -77,13 +77,13 @@ Instead of swimming across ten different SaaS tools to get one outcome, you will
 
 ---
 
-When Figma’s IPO paperwork hit, everyone online treated it like the crowning moment for SaaS.
+When Figma's IPO happened, everyone online treated it like the crowning moment for SaaS.
 
 To me, it felt more like the credits rolling.
 
 Figma showed you can take a hard, desktop heavy category like design, put it fully in the browser, and win. That was the SaaS dream in its final form.
 
-But if you zoomed out in 2024, you could already see the next wave building:
+But if you zoomed out in 2024 and 2025, you could already see the next wave building:
 
 - Foundation models that can read and write code, copy, emails, even basic strategy.
 - Early agent frameworks that chain steps together without you clicking every button.
@@ -96,7 +96,7 @@ Once you have:
 
 you do not actually need ten human facing SaaS apps. You need one orchestration layer that talks to all of them. And more and more, that orchestration layer is the real product.
 
-So while people were arguing about Figma’s multiples, I was mostly thinking: this is peak browser tab. The next era is not “SaaS vs on prem.” It is AI native vs everybody else.
+So while people were arguing about Figma's multiples, I was mostly thinking: this is peak browser tab. The next era is not "SaaS vs on prem." It is AI native vs everybody else.
 
 ---
 
@@ -104,7 +104,7 @@ Here is the simple version of the take.
 
 In an AI native world, the app is plumbing. The agent is the thing that matters.
 
-Your billing system, your CRM, your ticketing tool, those are implementation details. Most users will never care which vendor “owns” the form they never see.
+Your billing system, your CRM, your ticketing tool, those are implementation details. Most users will never care which vendor "owns" the form they never see.
 
 They will only ask:
 
@@ -124,7 +124,7 @@ The normal SaaS apps, the ones built for humans clicking through tabs, turn into
 
 None of this means software is dead or every SaaS stock goes to zero.
 
-What I am saying is that “SaaS” as a clean category, with per seat pricing, a pretty web UI, and a big sales team, is getting hollowed out.
+What I am saying is that "SaaS" as a clean category, with per seat pricing, a pretty web UI, and a big sales team, is getting hollowed out.
 
 The market already knows it:
 
@@ -137,11 +137,11 @@ SaaS will stick around too. It just will not be the main character anymore.
 
 ---
 
-So when I say I called the end of SaaS around the time Figma went for the public markets, what I really mean is that was the moment I stopped thinking in terms of apps and started thinking in terms of agents.
+So when I say I called the end of SaaS around the time Figma went public, what I really mean is that was the moment I stopped thinking in terms of apps and started thinking in terms of agents.
 
 Right now I am trying to focus my time and my money around a few simple beliefs:
 
-1. AI native beats SaaS native. If the main pitch is “we have a UI,” it is in trouble. If the main pitch is “we have real intelligence and orchestration,” it has a chance.\n2. Picks and shovels win the arms race. Compute, data infrastructure, and security have more upside than yet another wrapper around someone else’s API.\n3. Humans move to the outer loop. The inner loop, the clicking and reconciling and updating, belongs to agents. Humans set the targets and judge the results.
+1. AI native beats SaaS native. If the main pitch is "we have a UI," it is in trouble. If the main pitch is "we have real intelligence and orchestration," it has a chance.\\n2. Picks and shovels win the arms race. Compute, data infrastructure, and security have more upside than yet another wrapper around someone else's API.\\n3. Humans move to the outer loop. The inner loop, the clicking and reconciling and updating, belongs to agents. Humans set the targets and judge the results.
 
 That is what I am trying to get good at: setting up, steering, and auditing agents, instead of memorizing every new logo on the SaaS landscape.
 
