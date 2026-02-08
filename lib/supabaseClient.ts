@@ -29,8 +29,6 @@ I looked at Figma IPO headlines and did not just see "design SaaS wins." I saw t
 
 One thing I learned from my time at Link Ventures, basically being a 10x SWE there, is that AI is going to kill a lot of SaaS. Not overnight, but in the way the internet killed a lot of newspapers. Slowly at first, then suddenly once the market accepts the new default.
 
----
-
 The market is finally catching up.
 
 Look at 2025 and early 2026.
@@ -51,7 +49,6 @@ OpenAI did not just ship a nicer chatbot. They started shipping apps: an Inbound
 
 Anthropic pushes a new Claude Opus update and CNN runs a headline about "the AI that spooked the stock market." People are not crazy for reacting. For the first time it is believable that a horizontal AI system can eat whole SaaS categories instead of just plugging into them.
 
----
 
 Now look at the other side of the board in 2025:
 
@@ -75,7 +72,6 @@ Software is not going anywhere. But the idea of "we build a web app, you log in,
 
 Instead of swimming across ten different SaaS tools to get one outcome, you will just say what you want done. The system will call whatever APIs it needs behind the scenes.
 
----
 
 When Figma's IPO happened, everyone online treated it like the crowning moment for SaaS.
 
@@ -98,7 +94,6 @@ you do not actually need ten human facing SaaS apps. You need one orchestration 
 
 So while people were arguing about Figma's multiples, I was mostly thinking: this is peak browser tab. The next era is not "SaaS vs on prem." It is AI native vs everybody else.
 
----
 
 Here is the simple version of the take.
 
@@ -120,7 +115,6 @@ The companies that still look good in that world have a few things in common:
 
 The normal SaaS apps, the ones built for humans clicking through tabs, turn into back end services. They still exist, they just stop being where most of the value lands.
 
----
 
 None of this means software is dead or every SaaS stock goes to zero.
 
@@ -135,7 +129,6 @@ This is the same pattern we saw with on prem. On prem never vanished. It just st
 
 SaaS will stick around too. It just will not be the main character anymore.
 
----
 
 So when I say I called the end of SaaS around the time Figma went public, what I really mean is that was the moment I stopped thinking in terms of apps and started thinking in terms of agents.
 
