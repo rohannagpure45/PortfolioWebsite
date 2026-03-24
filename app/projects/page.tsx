@@ -40,6 +40,15 @@ const projects = [
     link: "https://cut-schedule-ck4d12342.vercel.app",
     tags: ["Next.js", "PostgreSQL", "Twilio"],
   },
+  {
+    id: 5,
+    title: "AIR Health Coach",
+    description:
+      "Privacy-first AI exercise analysis platform using MediaPipe pose estimation and Gemini AI. Analyzes movement form, detects fatigue, and tracks rehabilitation progress — all processed locally.",
+    image: "/airhealth.png",
+    link: "https://github.com/rohannagpure45/RohanNagpureACMHackathon2",
+    tags: ["Computer Vision", "FastAPI", "React", "AI"],
+  },
 ];
 
 // Card content component to avoid duplication
