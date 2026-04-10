@@ -40,6 +40,15 @@ const projects = [
     link: "https://cut-schedule-ck4d12342.vercel.app",
     tags: ["Next.js", "PostgreSQL", "Twilio"],
   },
+  {
+    id: 5,
+    title: "Vantage",
+    description:
+      "Multi-Agent Catastrophic Risk Simulation Platform that analyzes second and third-order effects of global disasters. Powered by GPT-5.2 and MiniMax M2.5 for agent orchestration with WebGL geospatial visualization.",
+    image: "/vantage.jpg",
+    link: "https://github.com/rohannagpure45/Vantage",
+    tags: ["Next.js", "AI Agents", "WebGL", "Risk Simulation"],
+  },
 ];
 
 // Card content component to avoid duplication
