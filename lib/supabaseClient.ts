@@ -14,58 +14,24 @@ const localBackupPosts = [
   {
     id: -21,
     title: "Breaking News Doesn't Break Anything Anymore",
-    excerpt: "A war with Iran ended two days ago. The Epstein files dropped 3 million pages. Gaza has been bombed for two years straight. Yesterday my feed was arguing about a TikTok dance.",
-    content: `Two days ago, a ceasefire was announced between the United States and Iran. Forty days of airstrikes. 1,665 civilians dead, 248 of them children. The Strait of Hormuz closed for the first time in modern history. A supreme leader assassinated.
+    excerpt: "A war with Iran ended two days ago. The Epstein files dropped 3 million pages. Gaza has been bombed for two years straight. Yesterday my feed was arguing about a TikTok dance. Nothing lands anymore.",
+    content: `Two days ago a ceasefire was announced with Iran. Forty days of airstrikes. 1,665 civilians dead. A supreme leader assassinated. I opened my phone yesterday and my feed was arguing about whether women should date "broke boys."
 
-Two days ago.
+The Epstein files dropped 3 million pages in January. Clinton, Musk, Branson, the current Commerce Secretary. The redactions were so bad you could copy-paste the blacked-out text and read it. Conversation moved on in a week.
 
-I opened my phone yesterday and my feed was split between a TikTok debate about whether women should date "broke boys" and someone's ranking of A24 movie trailers. Thirty million views on one. Forty dead children per day on the other. Guess which got the engagement.
+Gaza. 75,000 dead. 88 percent of buildings gone. That's a whole college town erased. Meanwhile someone stole 400,000 KitKat bars and the memes got more engagement than the war.
 
-We do not react to anything real anymore.
+Thirty years ago any one of these would've defined the decade. Now "breaking news" is a joke. Everything is breaking. Nothing lands.
 
-**Three stories. Same timeline. Zero sustained attention.**
+**Someone's making money off this.**
 
-Iran. February 28 to April 8, 2026. US and Israel launched a joint air campaign, 900 strikes in the first twelve hours. Iran retaliated on Israel and US bases across the region. Lebanon declared a national day of mourning after 250 were killed in a single wave. The ceasefire is two days old and already cracking. Iran says three of ten terms have been violated.
+Platforms don't care if you're informed. They care if you're engaged. Outrage content gets up to 24 percent more engagement than neutral content. Meta made $117 billion in ad revenue. Alphabet made $200 billion. That's your attention, sold.
 
-The Epstein files. DOJ released 3 million pages in January. Bill Clinton. Elon Musk. Richard Branson. Steve Bannon. Howard Lutnick, the current US Commerce Secretary. The redactions were so flawed the public could copy-paste the blacked-out text into a notes app and read it. Three million pages of receipts on one of the most disturbing criminal networks in modern history. Within a week, the conversation moved on.
+The big stuff doesn't change your Tuesday. Iran doesn't change your commute. Epstein doesn't change your grocery bill. So we default to the small stuff. Culture war posts, dating debates, coworker drama. Those feel like things we can actually win. And that's how the big stuff gets normalized. Not because people are stupid. Because the system makes it easier to care about the wrong things.
 
-Gaza. Over 75,000 dead since October 2023. 88 percent of buildings destroyed. A "ceasefire" that has seen 414 more Palestinians killed since it was announced. Seventy-five thousand is roughly the population of a mid-size American college town. Erased.
+I stopped arguing online about the small stuff. The argument is the product. Every comment is inventory for the platform to sell.
 
-**Meanwhile, on your phone.**
-
-Yesterday the internet was arguing about a comedian who dressed up as Erika Kirk. A UNC student newspaper ran an April Fools edition and the campus melted down for a week. The "Broke Boys" TikTok trend hit 30 million views on Facebook alone. Someone stole 400,000 KitKat bars in Europe and the memes wrote themselves.
-
-A candy heist got more sustained engagement than a war that just reshuffled the entire Middle East.
-
-Thirty years ago, any one of these three stories would have been the defining event of the decade. Watergate. The Gulf War. The OJ trial. Those stopped the country. Now "breaking news" means nothing. Everything is breaking. Your phone buzzes sixteen times before lunch with headlines engineered to make you feel something for three seconds before the next one loads.
-
-**Someone is making money off this.**
-
-Two thirds of Americans feel "exhausted" by the news they consume, per the Al Jazeera Media Institute. Pew Research confirmed in February 2026 that people are actively disengaging. But the platforms do not care if you are informed. They care if you are engaged. Emotionally charged content gets 17 to 24 percent more engagement than neutral content. Outrage performs. Nuance does not.
-
-Meta made $117 billion in ad revenue in 2023. Alphabet made over $200 billion. That money comes from your attention. A 2026 Georgetown Law report called attention "the most valuable asset" in the modern economy.
-
-The feed gives you what keeps you scrolling. And that is not a breakdown of ceasefire terms. It is a fifteen-second video that makes you angry enough to comment.
-
-The people on the other side of that algorithm are not confused. They are profitable.
-
-**The big stuff does not change your Tuesday.**
-
-The Iran war does not change your morning commute. The Epstein files do not affect your grocery bill. Gaza is 6,000 miles away. None of it shows up in your day-to-day in a way that demands immediate action.
-
-So we default to what feels immediate. The coworker drama. The culture war post. The debate about whether your date should pay for dinner. Those feel like things we can weigh in on, take a side, win. The big stuff is too heavy, too far away.
-
-That is exactly how it becomes normalized. Not because people are stupid. Because the system makes it structurally easier to care about the small stuff. The platforms reward reaction over reflection. And 75,000 people die and the dominant emotion is not grief. It is fatigue.
-
-**What I am doing about it.**
-
-I catch myself doing the same thing. Read a headline about the ceasefire, feel the weight for a moment, thumb keeps scrolling until I land on something lighter.
-
-I turned off most push notifications. I read longer pieces instead of headlines. One in-depth article teaches more than fifty alerts. I stopped arguing about the small stuff online because the argument itself is the product. Every comment, every quote tweet is inventory for the platform to sell. The outrage is not a side effect. It is the business model.
-
-There is a certain dignity in simply paying attention to the things that matter. Even when the algorithm would rather you did not.
-
-That might be the most countercultural thing you can do in 2026. Just paying attention.`,
+There's a certain dignity in just paying attention to the things that matter. That might be the most countercultural thing you can do in 2026.`,
     date: "2026-04-10",
     slug: "breaking-news-doesnt-break-anything"
   },
