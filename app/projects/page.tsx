@@ -54,7 +54,7 @@ const projects = [
     title: "Vantage",
     description:
       "Multi-Agent Catastrophic Risk Simulation Platform that analyzes second and third-order effects of global disasters. Powered by GPT-5.2 and MiniMax M2.5 for agent orchestration with WebGL geospatial visualization.",
-    image: "/vantage.jpg",
+    image: "/vantage.svg",
     link: "https://vantage-e4c8.vercel.app/?_vercel_share=k0hGIheFcKvUgBj6gmkktPfQ4Uh41DtA",
     tags: ["Next.js", "AI Agents", "WebGL", "Risk Simulation"],
   },
