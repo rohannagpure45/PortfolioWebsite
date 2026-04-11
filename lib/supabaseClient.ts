@@ -12,6 +12,83 @@ export const supabase = (supabaseUrl && supabaseAnonKey)
 // Using negative IDs to avoid conflicts with real database IDs
 const localBackupPosts = [
   {
+    id: -21,
+    title: "Your Physical Therapist Can't Watch You at 2 AM",
+    excerpt: "3.5 million youth sports injuries a year, and PT patients doing home exercises with zero feedback. I built an AI that watches your form so your therapist doesn't have to be in the room.",
+    content: `There are 3.5 million youth sports injuries in the United States every year. That number gets cited a lot and ignored even more. Behind every one of those injuries is a kid who eventually ends up in a physical therapist's office, gets a sheet of exercises, and goes home to do them alone.
+
+Alone meaning: no feedback, no correction, no idea if they are making things worse.
+
+I tore a ligament in high school. The PT sessions were great. Forty-five minutes of someone watching every rep, adjusting my knee angle by two degrees, telling me to stop compensating with my hip. Then I would go home and do the exercises in my living room with roughly the form of someone who had never been shown them. My PT had no idea. She saw me twice a week. The other five days were a black box.
+
+This is the hidden crisis in rehabilitation. The supervised sessions work. The unsupervised ones — where patients actually spend 90 percent of their recovery time — are a guess.
+
+**The problem nobody is solving**
+
+Physical therapy has a compliance problem that borders on comedic. Studies show that adherence to home exercise programs sits somewhere between 30 and 50 percent. And even among the people who do their exercises, a large portion are doing them wrong. Not because they are lazy or stupid, but because remembering the exact form your PT showed you three days ago while you are tired and sore at 10 PM is genuinely hard.
+
+The result: slower recovery, re-injury, and a system that burns through insurance visits correcting problems that happened at home.
+
+Youth sports makes this worse. Kids are bad at self-correcting. Parents mean well but most cannot tell the difference between a proper single-leg squat and one that is destroying a recovering ACL. Coaches have twenty other athletes to watch.
+
+So the feedback loop is broken. The expertise exists in the clinic. The reps happen at home. And there is nothing connecting the two.
+
+**What if your camera could be your PT?**
+
+That was the question we started with at the ACM Northeastern 2026 Hackathon. Not "how do we replace physical therapists" — they are irreplaceable — but how do we extend their reach into the 90 percent of recovery time they never see.
+
+The answer turned out to be surprisingly tractable with modern computer vision.
+
+We built AIR Health Coach: a system that uses your laptop or phone camera to analyze exercise form in real time. No cloud uploads. No data leaving your machine. Just MediaPipe pose estimation running locally, tracking 33 body landmarks at 30 frames per second, feeding into a 10-stage analysis pipeline that knows what good form looks like.
+
+The pipeline works like this:
+
+1. Camera captures video frames
+2. MediaPipe extracts pose landmarks — shoulders, hips, knees, ankles, wrists, all of it
+3. Joint angles are calculated in real time
+4. A biomechanical model compares your angles against ideal ranges for each exercise
+5. Fatigue detection watches for form degradation over time — when your knee starts caving inward on rep 8, the system catches it
+6. Rep counting tracks your sets automatically
+7. Form scoring gives you a real-time grade
+8. Gemini AI synthesizes everything into natural language coaching cues
+9. Session data gets logged locally for progress tracking
+10. Trend analysis shows your PT how you have been doing between visits
+
+We built form analysis for 11 different exercises — squats, lunges, planks, bridges, leg raises, and more. Each one has its own biomechanical ruleset defining what "correct" looks like and what compensations to watch for.
+
+**Why privacy is non-negotiable**
+
+Here is the part that matters most to me: none of this data leaves your device.
+
+Health data is some of the most sensitive information that exists. Your movement patterns, your injury history, your physical limitations — this is not something that should live on someone else's server. Period.
+
+The entire computer vision pipeline runs locally. MediaPipe processes frames on-device. The pose data stays on-device. Even the AI coaching uses local context. We designed it this way on purpose, not as a constraint but as a feature.
+
+There is a version of this technology that uploads your video to the cloud, runs analysis on remote servers, and stores your movement data indefinitely. That version is easier to build. It is also a privacy nightmare for anyone dealing with a health condition.
+
+If someone is recovering from a knee surgery, they deserve to track their progress without wondering who else is looking at their data. If a kid is doing PT exercises for a sports injury, their parents should not have to read a 40-page privacy policy to find out where that video goes.
+
+Local processing is not just a technical choice. It is an ethical one.
+
+**What this actually means**
+
+A 16-year-old recovering from an ACL tear can do their PT exercises at midnight and get real-time feedback on whether their knee is tracking correctly. A 70-year-old post hip replacement patient can do their daily exercises with confidence that they are not compensating dangerously. A PT can look at trend data from the past week and know exactly what to focus on in their next session.
+
+This is not AI replacing therapists. It is AI filling the gap between sessions — the gap where most recovery actually happens and most progress gets lost.
+
+**The bigger picture**
+
+I keep coming back to this idea that the best AI applications are the ones that empower people rather than surveilling them. The fitness and health tech industry has largely gone the other direction: wearables that upload everything, apps that monetize your biometrics, platforms where your health data is the product.
+
+AIR Health Coach is a bet on a different model. One where the intelligence runs on your device, the data stays yours, and the technology serves the patient instead of the platform.
+
+We built this in 36 hours at a hackathon. It works. The pose estimation is accurate, the form analysis catches real compensations, and the fatigue detection actually degrades gracefully as your muscles tire. There is a lot more to build — more exercises, better biomechanical models, integration with actual PT workflows — but the core thesis is proven.
+
+Your physical therapist cannot watch you at 2 AM. But your camera can. And it does not need to tell anyone else what it saw.`,
+    date: "2026-03-23",
+    slug: "airhealth-your-pt-cant-watch-you"
+  },
+  {
     id: -19,
     title: "The End of SaaS (I Told You So)",
     excerpt: "HubSpot down 51%. Salesforce down 31%. The market is finally pricing in what I started saying when Figma filed to go public: SaaS as a category is over. The future is AI-native, not another tab in your browser.",

@@ -27,7 +27,7 @@ const projects = [
     title: "AI Healthcare Chatbot",
     description:
       "A state-of-the-art AI chatbot for healthcare that assists with preliminary diagnosis and answers common health queries using NLP.",
-    image: "/yoga-pose.jpg",
+    image: "/img01.jpg",
     link: "https://vite-react-supabase.vercel.app/",
     tags: ["NLP", "Healthcare", "Chatbot"],
   },
@@ -42,6 +42,15 @@ const projects = [
   },
   {
     id: 5,
+    title: "AIR Health Coach",
+    description:
+      "Privacy-first AI exercise analysis platform using MediaPipe pose estimation and Gemini AI. Analyzes movement form, detects fatigue, and tracks rehabilitation progress — all processed locally.",
+    image: "/yoga-pose.jpg",
+    link: "https://github.com/rohannagpure45/RohanNagpureACMHackathon2",
+    tags: ["Computer Vision", "FastAPI", "React", "AI"],
+  },
+  {
+    id: 6,
     title: "Vantage",
     description:
       "Multi-Agent Catastrophic Risk Simulation Platform that analyzes second and third-order effects of global disasters. Powered by GPT-5.2 and MiniMax M2.5 for agent orchestration with WebGL geospatial visualization.",
