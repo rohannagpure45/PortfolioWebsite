@@ -1,10 +1,12 @@
 "use client";
 
+import GlassCard from "@/components/chrome/GlassCard";
+
 const experiences = [
   {
     company: "Link Ventures",
     role: "Software Engineer",
-    period: "Cambridge, MA | Jul 2025 – Dec 2025",
+    period: "Cambridge, MA · Jul 2025 – Dec 2025",
     bullets: [
       "Architected AI-accelerated full-stack project for venture accelerator, collaborating with and learning from both technical and entrepreneurial industry veterans.",
       "Mastered context engineering, Git workflows, and deployment pipelines for multiple concurrent projects.",
@@ -14,28 +16,28 @@ const experiences = [
   {
     company: "Speekr",
     role: "Software Engineer",
-    period: "Cypress, TX | Oct 2024 – Feb 2025",
+    period: "Cypress, TX · Oct 2024 – Feb 2025",
     bullets: [
-      "Engineered real time subtitle generation feature by integrating the Agentic RAG framework with an STT service.",
+      "Engineered real-time subtitle generation by integrating the Agentic RAG framework with an STT service.",
       "Model refinement boosted caption accuracy by 7% and reduced transcription delays by 11%.",
       "Assisted in deploying scalable cloud solutions with Docker and AWS, improving reliability.",
-      "Collaborated with cross-functional teams using Flask, Node.js, and REST APIs to optimize subtitle processing workflows.",
+      "Collaborated with cross-functional teams using Flask, Node.js, and REST APIs to optimize subtitle workflows.",
     ],
   },
   {
     company: "Northeastern Electric Racing",
     role: "Software Developer",
-    period: "January 2025 - Present",
+    period: "January 2025 – Present",
     bullets: [
-      "Developed and maintained FinishLine, a full-stack project management dashboard utilizing JavaScript, TypeScript, React, Express, and Node.js.",
-      "Implemented containerization with Docker to create scalable, consistent development and production environments.",
-      "Managed version control and deployment pipelines using Git and CI/CD tools reducing conflicts by 20%.",
+      "Developed and maintained FinishLine, a full-stack project management dashboard utilizing TypeScript, React, Express, and Node.js.",
+      "Implemented containerization with Docker for scalable, consistent development and production environments.",
+      "Managed version control and CI/CD pipelines using Git, reducing merge conflicts by 20%.",
     ],
   },
   {
     company: "Light Co.",
     role: "Founder, e-Commerce Business",
-    period: "May 2022 - February 2023",
+    period: "May 2022 – February 2023",
     bullets: [
       "Achieved $9,000 in revenue with strong profit margins.",
       "Successfully managed global supply chain relationships.",
@@ -44,17 +46,17 @@ const experiences = [
   },
 ];
 
-const skills = {
-  software: ["VSC", "IntelliJ", "Linux", "Microsoft Suite", "Git", "Figma", "Docker", "AWS"],
-  languages: ["Java", "C++", "Python", "TypeScript", "React", "Next.js", "Node.js", "SQL"],
-  soft: ["Leadership", "Public Speaking", "Problem Solving", "Team Collaboration", "Agile"],
+const skills: Record<string, string[]> = {
+  "Languages & Frameworks": ["Java", "C++", "Python", "TypeScript", "React", "Next.js", "Node.js", "SQL"],
+  "Tools & Platforms": ["VSC", "IntelliJ", "Linux", "Git", "Figma", "Docker", "AWS", "GCP"],
+  "Soft Skills": ["Leadership", "Public Speaking", "Problem Solving", "Team Collaboration", "Agile"],
 };
 
 const coursework = [
   "Object-Oriented Design",
   "Foundations of Data Science",
   "Cybersecurity",
-  "Algorithms and Data Structures",
+  "Algorithms & Data Structures",
   "Financial Accounting",
   "Financial Management",
   "CS Research",
@@ -71,40 +73,68 @@ const clubs = [
 
 export default function About() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center hero-gradient">
-        <div className="accent-glow top-0 right-0 opacity-50" />
-
-        <div className="relative z-10 text-center px-6 stagger-children">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-[#faf9f5]">
+    <div>
+      {/* Hero */}
+      <section
+        style={{
+          position: "relative",
+          minHeight: "46vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ position: "absolute", inset: 0, background: "rgba(7,7,6,.44)", zIndex: 1 }} />
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            textAlign: "center",
+            padding: "0 24px",
+            opacity: 0,
+            animation: "fadeUp .6s ease both",
+            animationDelay: ".1s",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "clamp(2.4rem,5.5vw,4rem)",
+              fontWeight: 700,
+              color: "#faf9f5",
+              letterSpacing: "-.02em",
+              marginBottom: 10,
+            }}
+          >
             Rohan Nagpure
           </h1>
-          <p className="text-xl text-[#b0aea5] mb-8 max-w-xl mx-auto">
-            Computer Science & Business Administration, Fintech Focus
+          <p
+            style={{
+              color: "rgba(176,174,165,.78)",
+              fontFamily: "var(--font-lora), Georgia, serif",
+              fontSize: "1rem",
+              marginBottom: 30,
+            }}
+          >
+            CS &amp; Business Administration · Fintech Focus · Northeastern University
           </p>
-
-          {/* Contact buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:nagpure.r@northeastern.edu"
-              className="btn btn-primary"
-            >
+          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <a className="btn btn-p" href="mailto:nagpure.r@northeastern.edu">
               Email Me
             </a>
             <a
-              href="https://www.linkedin.com/in/rohan-nagpure/"
+              className="btn btn-o"
+              href="https://linkedin.com/in/rohan-nagpure/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline"
             >
               LinkedIn
             </a>
             <a
+              className="btn btn-o"
               href="https://github.com/rohannagpure45"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline"
             >
               GitHub
             </a>
@@ -112,121 +142,186 @@ export default function About() {
         </div>
       </section>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto space-y-12">
+      <div
+        style={{
+          maxWidth: 880,
+          margin: "0 auto",
+          padding: "0 28px 80px",
+          display: "flex",
+          flexDirection: "column",
+          gap: 22,
+        }}
+      >
+        {/* Education */}
+        <GlassCard style={{ padding: "30px 34px" }}>
+          <p className="eyebrow" style={{ marginBottom: 10 }}>
+            Education
+          </p>
+          <h3 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#faf9f5", marginBottom: 4 }}>
+            Northeastern University
+          </h3>
+          <p
+            style={{
+              color: "rgba(176,174,165,.8)",
+              fontFamily: "var(--font-lora), Georgia, serif",
+            }}
+          >
+            B.S. Computer Science &amp; Business Administration
+          </p>
+          <p style={{ color: "rgba(176,174,165,.5)", fontSize: ".82rem", marginBottom: 14 }}>
+            Expected December 2026 · Fintech Concentration
+          </p>
+          <p
+            style={{
+              color: "rgba(176,174,165,.75)",
+              fontFamily: "var(--font-lora), Georgia, serif",
+              fontSize: ".9rem",
+              lineHeight: 1.72,
+            }}
+          >
+            Passionate about applying computer science skills to solve complex financial problems.
+            Building at the intersection of technology and markets.
+          </p>
+        </GlassCard>
 
-          {/* Education Section */}
-          <section className="card-elevated p-8 animate-fade-up">
-            <h2 className="text-2xl font-bold mb-6 text-[#d97757]">Education</h2>
-            <div>
-              <h3 className="text-xl font-semibold text-[#faf9f5]">Northeastern University</h3>
-              <p className="text-[#b0aea5]">B.S. in Computer Science and Business Administration</p>
-              <p className="text-[#b0aea5]/70">Expected Graduation: December 2026</p>
-              <span className="badge mt-3">
-                Concentration in Fintech
+        {/* Skills */}
+        <GlassCard style={{ padding: "30px 34px" }}>
+          <p className="eyebrow" style={{ marginBottom: 10 }}>
+            Technical Skills
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))",
+              gap: 20,
+              marginTop: 6,
+            }}
+          >
+            {Object.entries(skills).map(([cat, items]) => (
+              <div key={cat}>
+                <p
+                  style={{
+                    fontSize: ".68rem",
+                    color: "#d97757",
+                    fontWeight: 500,
+                    marginBottom: 10,
+                    letterSpacing: ".06em",
+                  }}
+                >
+                  {cat}
+                </p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                  {items.map((s) => (
+                    <span key={s} className="bn">
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </GlassCard>
+
+        {/* Coursework */}
+        <GlassCard style={{ padding: "28px 34px" }}>
+          <p className="eyebrow" style={{ marginBottom: 10 }}>
+            Relevant Coursework
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 6 }}>
+            {coursework.map((c) => (
+              <span key={c} className="bn">
+                {c}
               </span>
-              <p className="text-[#b0aea5] mt-4 leading-relaxed">
-                My passion lies at the intersection of finance and technology. I'm particularly
-                interested in working in the fintech industry, where I can apply my computer
-                science skills to solve complex financial problems.
-              </p>
-            </div>
-          </section>
+            ))}
+          </div>
+        </GlassCard>
 
-          {/* Coursework */}
-          <section className="card-elevated p-8 animate-fade-up">
-            <h2 className="text-2xl font-bold mb-6 text-[#d97757]">Relevant Coursework</h2>
-            <div className="flex flex-wrap gap-3">
-              {coursework.map((course) => (
-                <span key={course} className="badge-neutral">
-                  {course}
-                </span>
-              ))}
-            </div>
-          </section>
-
-          {/* Technical Skills */}
-          <section className="card-elevated p-8 animate-fade-up">
-            <h2 className="text-2xl font-bold mb-6 text-[#d97757]">Technical Skills</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-[#d97757] font-semibold mb-4">Software & Tools</h3>
-                <div className="flex flex-wrap gap-2">
-                  {skills.software.map((skill) => (
-                    <span key={skill} className="badge-neutral">
-                      {skill}
+        {/* Experience timeline */}
+        <div>
+          <p className="eyebrow" style={{ marginBottom: 10 }}>
+            Experience
+          </p>
+          <div
+            style={{
+              position: "relative",
+              paddingLeft: 28,
+              borderLeft: "1.5px solid rgba(176,174,165,.14)",
+              marginTop: 14,
+            }}
+          >
+            {experiences.map((exp, i) => (
+              <div key={i} style={{ position: "relative", marginBottom: 20 }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    left: -36,
+                    top: 7,
+                    width: 14,
+                    height: 14,
+                    background: "#d97757",
+                    borderRadius: "50%",
+                    border: "3px solid #080807",
+                    boxShadow: "0 0 0 3px rgba(217,119,87,.15)",
+                  }}
+                />
+                <GlassCard style={{ marginLeft: 14, padding: "22px 26px" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                      gap: 8,
+                      marginBottom: 8,
+                    }}
+                  >
+                    <div>
+                      <h3 style={{ fontWeight: 600, color: "#faf9f5", marginBottom: 2 }}>
+                        {exp.company}
+                      </h3>
+                      <p style={{ fontSize: ".85rem", color: "#d97757", fontWeight: 500 }}>
+                        {exp.role}
+                      </p>
+                    </div>
+                    <span className="bd" style={{ alignSelf: "flex-start" }}>
+                      {exp.period}
                     </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-[#d97757] font-semibold mb-4">Languages & Frameworks</h3>
-                <div className="flex flex-wrap gap-2">
-                  {skills.languages.map((skill) => (
-                    <span key={skill} className="badge-neutral">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-[#d97757] font-semibold mb-4">Soft Skills</h3>
-                <div className="flex flex-wrap gap-2">
-                  {skills.soft.map((skill) => (
-                    <span key={skill} className="badge-neutral">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Work Experience - Timeline */}
-          <section className="animate-fade-up">
-            <h2 className="text-2xl font-bold mb-8 text-[#d97757]">Work Experience</h2>
-            <div className="relative pl-8 border-l-2 border-[#b0aea5]/20">
-              {experiences.map((exp, index) => (
-                <div key={index} className="mb-10 relative group">
-                  {/* Timeline dot */}
-                  <div className="absolute -left-[25px] w-4 h-4 bg-[#d97757] rounded-full 
-                                  ring-4 ring-[#141413] group-hover:ring-[#d97757]/20 transition-all" />
-
-                  {/* Experience card */}
-                  <div className="card-elevated p-6 ml-4 hover-lift">
-                    <h3 className="text-xl font-semibold text-[#faf9f5] group-hover:text-[#d97757] transition-colors">
-                      {exp.company}
-                    </h3>
-                    <p className="text-[#d97757] font-medium">{exp.role}</p>
-                    <p className="text-[#b0aea5]/70 text-sm mb-4">{exp.period}</p>
-                    <ul className="space-y-2">
-                      {exp.bullets.map((bullet, i) => (
-                        <li key={i} className="flex items-start gap-3 text-[#b0aea5]">
-                          <span className="text-[#d97757] mt-1 flex-shrink-0">→</span>
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Activities and Clubs */}
-          <section className="card-elevated p-8 animate-fade-up">
-            <h2 className="text-2xl font-bold mb-6 text-[#d97757]">Activities & Clubs</h2>
-            <div className="flex flex-wrap gap-3">
-              {clubs.map((club) => (
-                <span key={club} className="badge-neutral">
-                  {club}
-                </span>
-              ))}
-            </div>
-          </section>
-
+                  {exp.bullets.map((b, j) => (
+                    <div
+                      key={j}
+                      style={{
+                        display: "flex",
+                        gap: 8,
+                        color: "rgba(176,174,165,.74)",
+                        fontSize: ".84rem",
+                        lineHeight: 1.65,
+                        marginBottom: 5,
+                        fontFamily: "var(--font-lora), Georgia, serif",
+                      }}
+                    >
+                      <span style={{ color: "#d97757", flexShrink: 0, fontFamily: "inherit" }}>→</span>
+                      <span>{b}</span>
+                    </div>
+                  ))}
+                </GlassCard>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Activities */}
+        <GlassCard style={{ padding: "28px 34px" }}>
+          <p className="eyebrow" style={{ marginBottom: 10 }}>
+            Activities &amp; Clubs
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 6 }}>
+            {clubs.map((c) => (
+              <span key={c} className="bn">
+                {c}
+              </span>
+            ))}
+          </div>
+        </GlassCard>
       </div>
     </div>
   );

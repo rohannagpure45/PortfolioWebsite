@@ -1,162 +1,171 @@
 "use client";
 
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
+import PageHero from "@/components/chrome/PageHero";
+import { projects, type Project } from "@/lib/projects";
 
-const projects = [
-  {
-    id: 1,
-    title: "AI Stock Analyzer",
-    description:
-      "An AI-powered tool using TensorFlow.js to analyze and predict stock market trends. Utilizes a pre-trained neural network model to forecast stock prices based on historical data.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-h6ap4fzocELMoWax9HkVAKJ2YJA7T3.png",
-    link: "/projects/stock-analyzer",
-    tags: ["TensorFlow.js", "AI/ML", "Finance"],
-  },
-  {
-    id: 2,
-    title: "Movie Recommendations",
-    description:
-      "A personalized movie recommendation system using TMDb API. Implements advanced filtering and sorting algorithms for highly relevant suggestions.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j39qIVhl5NW7U4tHfbO66QcV0ZjIyJ.png",
-    link: "/projects/movie-recommendations",
-    tags: ["React", "TMDb API", "Algorithms"],
-  },
-  {
-    id: 3,
-    title: "AI Healthcare Chatbot",
-    description:
-      "A state-of-the-art AI chatbot for healthcare that assists with preliminary diagnosis and answers common health queries using NLP.",
-    image: "/img01.jpg",
-    link: "https://vite-react-supabase.vercel.app/",
-    tags: ["NLP", "Healthcare", "Chatbot"],
-  },
-  {
-    id: 4,
-    title: "CutSchedule",
-    description:
-      "Modern appointment booking platform for barbers featuring SMS reminders, Google Calendar integration, and admin dashboard. Built with Next.js and PostgreSQL.",
-    image: "/cutschedule.png",
-    link: "https://cut-schedule-ck4d12342.vercel.app",
-    tags: ["Next.js", "PostgreSQL", "Twilio"],
-  },
-  {
-    id: 5,
-    title: "AIR Health Coach",
-    description:
-      "Privacy-first AI exercise analysis platform using MediaPipe pose estimation and Gemini AI. Analyzes movement form, detects fatigue, and tracks rehabilitation progress — all processed locally.",
-    image: "/yoga-pose.jpg",
-    link: "https://github.com/rohannagpure45/RohanNagpureACMHackathon2",
-    tags: ["Computer Vision", "FastAPI", "React", "AI"],
-  },
-  {
-    id: 6,
-    title: "Vantage",
-    description:
-      "Multi-Agent Catastrophic Risk Simulation Platform that analyzes second and third-order effects of global disasters. Powered by GPT-5.2 and MiniMax M2.5 for agent orchestration with WebGL geospatial visualization.",
-    image: "/vantage.svg",
-    link: "https://vantage-e4c8.vercel.app/?_vercel_share=k0hGIheFcKvUgBj6gmkktPfQ4Uh41DtA",
-    tags: ["Next.js", "AI Agents", "WebGL", "Risk Simulation"],
-  },
-];
+function Arrow() {
+  return (
+    <svg
+      style={{ width: 15, height: 15, flexShrink: 0 }}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  );
+}
 
-// Card content component to avoid duplication
-function ProjectCardContent({ project }: { project: typeof projects[0] }) {
+function ProjectCardInner({ p }: { p: Project }) {
   return (
     <>
-      {/* Image with overlay */}
-      <div className="relative h-56 overflow-hidden">
-        <Image
-          src={project.image || "/placeholder.svg"}
-          alt={project.title}
-          fill
-          className="object-cover transition-transform duration-500 
-                     group-hover:scale-105"
+      <div style={{ position: "relative", height: 210, background: "#0f0f0e", overflow: "hidden" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={p.image}
+          alt={p.title}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            transition: "transform .5s",
+          }}
         />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#141413] via-[#141413]/60 to-transparent" />
-
-        {/* Tags overlay */}
-        <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-          {project.tags?.map((tag) => (
-            <span
-              key={tag}
-              className="badge text-xs"
-            >
-              {tag}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(to top,rgba(7,7,6,.95) 0%,rgba(7,7,6,.4) 55%,transparent 100%)",
+          }}
+        />
+        <span className="bd" style={{ position: "absolute", top: 12, right: 12 }}>
+          {p.date}
+        </span>
+        <div
+          style={{
+            position: "absolute",
+            bottom: 12,
+            left: 14,
+            display: "flex",
+            gap: 5,
+            flexWrap: "wrap",
+          }}
+        >
+          {p.tags.map((t) => (
+            <span key={t} className="ba" style={{ fontSize: ".64rem" }}>
+              {t}
             </span>
           ))}
         </div>
       </div>
-
-      {/* Content */}
-      <div className="p-6">
-        <h2 className="text-xl font-semibold text-[#faf9f5] mb-3 
-                       group-hover:text-[#d97757] transition-colors">
-          {project.title}
+      <div style={{ padding: "20px 24px" }}>
+        <h2 style={{ fontSize: "1.02rem", fontWeight: 600, color: "#faf9f5", marginBottom: 8 }}>
+          {p.title}
         </h2>
-        <p className="text-[#b0aea5] mb-4 line-clamp-3">
-          {project.description}
+        <p
+          style={{
+            color: "rgba(176,174,165,.76)",
+            fontSize: ".84rem",
+            lineHeight: 1.65,
+            fontFamily: "var(--font-lora), Georgia, serif",
+            marginBottom: 14,
+          }}
+        >
+          {p.description}
         </p>
-        <span className="text-[#d97757] font-medium inline-flex items-center gap-2 
-                         group-hover:gap-3 transition-all">
-          Explore Project
-          <svg
-            className="w-4 h-4 transition-transform group-hover:translate-x-1"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
+        <span
+          style={{
+            color: "#d97757",
+            fontSize: ".8rem",
+            fontWeight: 500,
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 6,
+          }}
+        >
+          Explore Project <Arrow />
         </span>
       </div>
     </>
   );
 }
 
-export default function Projects() {
-  const cardClassName = "group relative overflow-hidden rounded-2xl card-elevated transition-all duration-300 hover-lift cursor-pointer";
+export default function ProjectsPage() {
+  const [sort, setSort] = useState<"newest" | "oldest">("newest");
+  const sorted = [...projects].sort((a, b) => {
+    const d = (s: string) => new Date(s + " 1").getTime();
+    return sort === "newest" ? d(b.date) - d(a.date) : d(a.date) - d(b.date);
+  });
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[40vh] flex items-center justify-center hero-gradient">
-        <div className="accent-glow top-0 left-0 opacity-50" />
-
-        <div className="relative z-10 text-center px-6 stagger-children">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-[#faf9f5]">
-            My Projects
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg text-[#b0aea5]">
-            A showcase of my work in finance, technology, and full-stack development.
-          </p>
+    <div>
+      <PageHero
+        eyebrow="Work"
+        title="Projects"
+        subtitle="Fintech, AI, and full-stack engineering."
+        minH="42vh"
+      />
+      <div style={{ maxWidth: 1080, margin: "0 auto", padding: "48px 28px 80px" }}>
+        <div style={{ display: "flex", gap: 8, marginBottom: 36 }}>
+          {(["newest", "oldest"] as const).map((s) => (
+            <button
+              key={s}
+              onClick={() => setSort(s)}
+              style={{
+                padding: "5px 16px",
+                borderRadius: 6,
+                border: "1px solid",
+                borderColor: sort === s ? "rgba(217,119,87,.45)" : "rgba(255,255,255,.09)",
+                background: sort === s ? "rgba(217,119,87,.1)" : "transparent",
+                color: sort === s ? "#d97757" : "rgba(176,174,165,.65)",
+                fontSize: ".75rem",
+                fontWeight: 500,
+                cursor: "pointer",
+                transition: "all .2s",
+                fontFamily: "inherit",
+                letterSpacing: ".04em",
+              }}
+            >
+              {s === "newest" ? "↓ Newest first" : "↑ Oldest first"}
+            </button>
+          ))}
         </div>
-      </section>
-
-      {/* Project Cards Grid */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => {
-            const isExternal = project.link.startsWith("http");
-
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill,minmax(min(100%,470px),1fr))",
+            gap: 24,
+          }}
+        >
+          {sorted.map((p, i) => {
+            const isExternal = p.link.startsWith("http");
+            const cardStyle = {
+              overflow: "hidden",
+              cursor: "pointer",
+              opacity: 0,
+              animation: "fadeUp .5s ease both",
+              animationDelay: `${i * 0.07}s`,
+              color: "inherit",
+              display: "block",
+            } as const;
             return isExternal ? (
               <a
-                key={project.id}
-                href={project.link}
+                key={p.id}
+                href={p.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={cardClassName}
+                className="gc"
+                style={cardStyle}
               >
-                <ProjectCardContent project={project} />
+                <ProjectCardInner p={p} />
               </a>
             ) : (
-              <Link
-                key={project.id}
-                href={project.link}
-                className={cardClassName}
-              >
-                <ProjectCardContent project={project} />
+              <Link key={p.id} href={p.link} className="gc" style={cardStyle}>
+                <ProjectCardInner p={p} />
               </Link>
             );
           })}

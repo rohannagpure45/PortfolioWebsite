@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import PageHero from "@/components/chrome/PageHero";
 import { getBlogPosts } from "@/lib/supabaseClient";
 
 interface BlogPost {
@@ -13,113 +14,180 @@ interface BlogPost {
   slug: string;
 }
 
+function Arrow() {
+  return (
+    <svg
+      style={{ width: 13, height: 13, flexShrink: 0 }}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  );
+}
+
 export default function Blog() {
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    (async () => {
       try {
-        setLoading(true);
-        const posts = await getBlogPosts();
-        setBlogPosts(posts);
+        const data = await getBlogPosts();
+        setPosts(data);
       } catch (err) {
         setError("Failed to load blog posts");
-        console.error("Error fetching blog posts:", err);
+        console.error(err);
       } finally {
         setLoading(false);
       }
-    };
-
-    fetchPosts();
+    })();
   }, []);
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[40vh] flex items-center justify-center hero-gradient">
-        <div className="accent-glow bottom-0 right-0 opacity-50" />
-
-        <div className="relative z-10 text-center px-6 stagger-children">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-[#faf9f5]">
-            My Blog
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg text-[#b0aea5]">
-            Insights about financial markets, technology trends, and the
-            intersection of computer science and finance.
-          </p>
-
-          {/* RSS Feed Link */}
+    <div>
+      <PageHero
+        eyebrow="Writing"
+        title="Blog"
+        subtitle="Finance, engineering, and the things in between."
+        minH="38vh"
+      />
+      <div style={{ maxWidth: 720, margin: "0 auto", padding: "44px 28px 80px" }}>
+        <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: 28 }}>
           <a
             href="/api/rss"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-6 text-[#d97757] hover:underline text-sm"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 6,
+              color: "#d97757",
+              fontSize: ".75rem",
+              fontWeight: 500,
+            }}
           >
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z" />
             </svg>
             Subscribe via RSS
           </a>
         </div>
-      </section>
 
-      {/* Blog Content */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-3xl mx-auto">
-          {loading && (
-            <div className="text-center py-16">
-              <div className="inline-block w-8 h-8 border-2 border-[#d97757] border-t-transparent rounded-full animate-spin mb-4" />
-              <p className="text-[#b0aea5]">Loading blog posts...</p>
-            </div>
-          )}
-
-          {error && (
-            <div className="text-center py-12 card bg-[#f87171]/5 border-[#f87171]/20">
-              <p className="text-[#f87171]">{error}</p>
-            </div>
-          )}
-
-          {!loading && !error && blogPosts.length === 0 && (
-            <div className="text-center py-16 card-elevated">
-              <p className="text-[#b0aea5]">No blog posts found.</p>
-              <p className="text-[#b0aea5]/60 text-sm mt-2">Check back soon for new content!</p>
-            </div>
-          )}
-
-          <div className="space-y-6">
-            {blogPosts.map((post) => (
-              <article
-                key={post.id}
-                className="card-elevated overflow-hidden transition-all duration-300 hover:ring-1 hover:ring-[#d97757]/30"
-              >
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="block p-6 group"
-                >
-                  <div className="flex justify-between items-start mb-3">
-                    <h2 className="text-xl font-semibold text-[#faf9f5] group-hover:text-[#d97757] transition-colors">
-                      {post.title}
-                    </h2>
-                    <span className="text-[#b0aea5]/60 text-sm whitespace-nowrap ml-4">
-                      {post.date}
-                    </span>
-                  </div>
-                  <p className="text-[#b0aea5] mb-4 leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                  <span className="text-[#d97757] font-medium inline-flex items-center gap-2 
-                                   group-hover:gap-3 transition-all">
-                    Read more
-                    <svg className="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </Link>
-              </article>
-            ))}
+        {loading && (
+          <div style={{ textAlign: "center", padding: "48px 0", color: "rgba(176,174,165,.6)" }}>
+            <div
+              style={{
+                display: "inline-block",
+                width: 28,
+                height: 28,
+                border: "2px solid #d97757",
+                borderTopColor: "transparent",
+                borderRadius: "50%",
+                animation: "spin 1s linear infinite",
+                marginBottom: 12,
+              }}
+            />
+            <p style={{ fontFamily: "var(--font-lora), Georgia, serif" }}>Loading posts…</p>
           </div>
+        )}
+
+        {error && (
+          <div
+            className="gc"
+            style={{
+              padding: "20px 24px",
+              textAlign: "center",
+              color: "#f87171",
+              borderColor: "rgba(248,113,113,.25)",
+            }}
+          >
+            {error}
+          </div>
+        )}
+
+        {!loading && !error && posts.length === 0 && (
+          <div
+            className="gc"
+            style={{
+              padding: "32px 24px",
+              textAlign: "center",
+              color: "rgba(176,174,165,.6)",
+              fontFamily: "var(--font-lora), Georgia, serif",
+            }}
+          >
+            No posts yet — check back soon.
+          </div>
+        )}
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          {posts.map((p, i) => (
+            <Link
+              key={p.id}
+              href={`/blog/${p.slug}`}
+              className="gc"
+              style={{
+                padding: "22px 28px",
+                cursor: "pointer",
+                opacity: 0,
+                animation: "fadeUp .5s ease both",
+                animationDelay: `${i * 0.05}s`,
+                color: "inherit",
+                display: "block",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "flex-start",
+                  gap: 14,
+                  marginBottom: 10,
+                }}
+              >
+                <h2
+                  style={{
+                    fontSize: ".98rem",
+                    fontWeight: 600,
+                    color: "#faf9f5",
+                    lineHeight: 1.4,
+                    flex: 1,
+                  }}
+                >
+                  {p.title}
+                </h2>
+                <span className="bd" style={{ flexShrink: 0 }}>
+                  {p.date}
+                </span>
+              </div>
+              <p
+                style={{
+                  color: "rgba(176,174,165,.74)",
+                  fontSize: ".86rem",
+                  lineHeight: 1.68,
+                  fontFamily: "var(--font-lora), Georgia, serif",
+                  marginBottom: 14,
+                }}
+              >
+                {p.excerpt}
+              </p>
+              <span
+                style={{
+                  color: "#d97757",
+                  fontSize: ".8rem",
+                  fontWeight: 500,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 5,
+                }}
+              >
+                Read more <Arrow />
+              </span>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

@@ -1,282 +1,417 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import StreamText from "@/components/chrome/StreamText";
+import GlassCard from "@/components/chrome/GlassCard";
+import { projects } from "@/lib/projects";
+import { getBlogPosts } from "@/lib/supabaseClient";
 
-interface StockPosition {
-  symbol: string;
-  company: string;
-  price: number;
-  change: number;
-  logo: string;
+interface BlogPost {
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  slug: string;
 }
 
-const companyLogos: Record<string, string> = {
-  GOOGL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cKwxh8OtAJKFY2UDxguFqOXar91fjg.png",
-  META: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QvD6XOlpB9hHngpego5rG0dJSGP0HM.png",
-  NVDA: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-laVPhifxAT81gHioLgZ5mKcg8UX9j1.png",
-  GS: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1sQEFiRB5lCVSpicpMC50GJHqYUJOl.png",
-  AAPL: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PTbHxCoorWCEdRIugq8giGxLcEY1la.png",
-  TSLA: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-fAxRCHCgOe5HdYrDoWc9ajj4iyqkw0.png",
-  MSFT: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-lNHdtVIvqEwMK5FMcACT56qa5yJyl5.png",
-  ASTS: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-f0W38ZttIm7VGOckayQPDWYqijLUjU.png",
-  MU: "https://cdn.freebiesupply.com/logos/thumbs/2x/micron-technology-logo.png",
-  TSM: "https://cdn.freebiesupply.com/logos/thumbs/2x/tsmc-logo.png",
-};
-
-// Stock exchange mapping - NYSE tickers need different exchange
-const stockExchanges: Record<string, string> = {
-  GS: "NYSE",
-  TSM: "NYSE",
-};
+function Arrow() {
+  return (
+    <svg
+      style={{ width: 15, height: 15, flexShrink: 0 }}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  );
+}
 
 export default function Home() {
-  const [positions, setPositions] = useState<StockPosition[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [hasScrolled, setHasScrolled] = useState(false);
+  const [recentPosts, setRecentPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!hasScrolled && window.scrollY > 0) {
-        setHasScrolled(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [hasScrolled]);
-
-  useEffect(() => {
-    async function fetchStockData() {
-      try {
-        const response = await fetch("/api/stocks");
-        if (!response.ok) {
-          throw new Error("Failed to fetch stock data");
-        }
-        const data = await response.json();
-        const stocksWithLogos = data.map((stock: StockPosition) => ({
-          ...stock,
-          logo: companyLogos[stock.symbol] || "/placeholder.svg",
-        }));
-        setPositions(stocksWithLogos);
-        setLoading(false);
-      } catch (err) {
-        setError("Failed to load stock data. Please try again later.");
-        setLoading(false);
-      }
-    }
-
-    fetchStockData();
+    getBlogPosts().then((posts) => setRecentPosts(posts.slice(0, 2)));
   }, []);
 
+  const featured = projects.slice(0, 3);
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center hero-gradient">
-        {/* Subtle accent glow */}
-        <div className="accent-glow top-1/4 -right-40 opacity-60" />
-        <div className="accent-glow bottom-0 -left-40 opacity-40" />
+    <div>
+      {/* HERO */}
+      <section
+        style={{
+          position: "relative",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "radial-gradient(ellipse 70% 55% at 50% 38%, rgba(30,28,26,0) 0%, rgba(8,8,7,.72) 65%, rgba(6,6,5,.97) 100%)",
+            zIndex: 1,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "radial-gradient(ellipse 55% 45% at 50% 36%, rgba(80,68,58,.18) 0%, transparent 70%)",
+            zIndex: 1,
+          }}
+        />
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            textAlign: "center",
+            padding: "0 24px",
+            maxWidth: 820,
+            marginTop: 60,
+          }}
+        >
+          <StreamText
+            text="Computer Science · Business · Fintech"
+            as="p"
+            baseDelay={0.1}
+            charDelay={0.034}
+            style={{
+              fontSize: ".68rem",
+              fontWeight: 500,
+              letterSpacing: ".18em",
+              textTransform: "uppercase",
+              color: "rgba(217,119,87,.88)",
+              marginBottom: 30,
+            }}
+          />
 
-        {/* Hero content */}
-        <div className="relative z-10 text-center px-6 max-w-3xl mx-auto stagger-children">
-          <p className="text-[#d97757] font-medium tracking-wide uppercase text-sm mb-6">
-            Computer Science & Business Administration
-          </p>
+          <StreamText
+            text="Building the Future of Finance"
+            as="h1"
+            baseDelay={0.45}
+            charDelay={0.034}
+            style={{
+              fontSize: "clamp(2.8rem,6.5vw,5.2rem)",
+              fontWeight: 700,
+              lineHeight: 1.12,
+              color: "#faf9f5",
+              marginBottom: 28,
+            }}
+          />
 
-          <h1
-            className="text-5xl md:text-7xl font-bold mb-8 text-[#faf9f5] leading-tight"
-            style={{ wordSpacing: '0.1em', letterSpacing: '-0.02em' }}
-          >
-            Building the Future
-            <br />
-            <span className="text-[#d97757] inline-block mt-2" style={{ letterSpacing: '0' }}>of Finance</span>
-          </h1>
-
-          <p className="text-xl text-[#b0aea5] mb-12 max-w-xl mx-auto leading-relaxed">
-            Rohan Nagpure is a Northeastern University student passionate about fintech,
-            building innovative solutions at the intersection of technology and finance.
-          </p>
-
-          {/* CTA buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/projects" className="btn btn-primary">
-              View Projects
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link href="/about" className="btn btn-outline">
-              About Me
-            </Link>
+          <div style={{ opacity: 0, animation: "fadeUp .7s ease both", animationDelay: "1.45s" }}>
+            <p
+              style={{
+                fontFamily: "var(--font-lora), Georgia, serif",
+                fontSize: "1.05rem",
+                lineHeight: 1.78,
+                color: "rgba(176,174,165,.82)",
+                maxWidth: 520,
+                margin: "0 auto 40px",
+              }}
+            >
+              Northeastern University student building innovative solutions at the intersection of
+              technology and finance.
+            </p>
+            <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+              <Link href="/projects" className="btn btn-p">
+                View Projects <Arrow />
+              </Link>
+              <Link href="/about" className="btn btn-o">
+                About Me
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div
-          className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-700 ease-out ${hasScrolled ? 'opacity-0 translate-y-4 pointer-events-none' : 'opacity-100 translate-y-0'
-            }`}
+          style={{
+            position: "absolute",
+            bottom: 28,
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 2,
+            opacity: 0,
+            animation: "fadeUp .5s ease both",
+            animationDelay: "1.9s",
+          }}
         >
-          <div className="w-6 h-10 rounded-full border-2 border-[#b0aea5]/30 flex justify-center pt-2">
-            <div className="w-1 h-2 bg-[#b0aea5]/50 rounded-full animate-pulse-subtle" />
+          <div
+            style={{
+              width: 22,
+              height: 36,
+              borderRadius: 11,
+              border: "1.5px solid rgba(176,174,165,.22)",
+              display: "flex",
+              justifyContent: "center",
+              paddingTop: 7,
+            }}
+          >
+            <div style={{ width: 3, height: 7, borderRadius: 2, background: "rgba(176,174,165,.4)" }} />
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="card-elevated p-8">
-          <div className="flex items-stretch gap-6">
-            {/* Accent line */}
-            <div className="w-1 bg-gradient-to-b from-[#d97757] to-[#d97757]/30 rounded-full flex-shrink-0" />
-
-            {/* Content */}
-            <div className="flex-1">
-              <p className="text-xs font-medium tracking-widest text-[#d97757] uppercase mb-2">
+      {/* CONSULTING CARD */}
+      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "0 28px" }}>
+        <GlassCard
+          style={{
+            padding: "26px 32px",
+            opacity: 0,
+            animation: "fadeUp .6s ease both",
+            animationDelay: ".2s",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
+            <div
+              style={{
+                width: 3,
+                minHeight: 52,
+                background: "linear-gradient(180deg,#d97757,rgba(217,119,87,.15))",
+                borderRadius: 2,
+                flexShrink: 0,
+              }}
+            />
+            <div style={{ flex: 1, minWidth: 200 }}>
+              <p className="eyebrow" style={{ marginBottom: 5 }}>
                 Software Consulting
               </p>
-
-              <h3 className="font-semibold text-2xl text-[#faf9f5] mb-3">
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#faf9f5", marginBottom: 5 }}>
                 Unbounded Scaling LLC
               </h3>
-
-              <p className="text-[#b0aea5] mb-6 max-w-xl">
+              <p
+                style={{
+                  color: "rgba(176,174,165,.72)",
+                  fontSize: ".85rem",
+                  fontFamily: "var(--font-lora), Georgia, serif",
+                }}
+              >
                 Custom software solutions, built right. From MVPs to production-ready applications.
               </p>
-
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-                <a
-                  href="tel:6093756850"
-                  className="font-mono text-[#b0aea5] hover:text-[#d97757] transition-colors"
-                >
-                  (609) 375-6850
-                </a>
-                <span className="text-[#b0aea5]/30">·</span>
-                <a
-                  href="mailto:rohannagpure23@gmail.com"
-                  className="text-[#b0aea5] hover:text-[#d97757] transition-colors inline-flex items-center gap-2 group"
-                >
-                  rohannagpure23@gmail.com
-                  <svg
-                    className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-              </div>
             </div>
+            <a
+              href="mailto:rohannagpure23@gmail.com"
+              className="btn btn-o"
+              style={{ flexShrink: 0 }}
+            >
+              Get in touch
+            </a>
           </div>
-        </div>
+        </GlassCard>
       </section>
 
-      {/* Welcome Text Section */}
-      <section className="container mx-auto px-6 pb-12">
-        <div className="card p-8 max-w-3xl mx-auto text-center">
-          <p className="prose mx-auto">
-            Welcome to my personal website! As a student passionate about finance and technology,
-            I decided to showcase my long-term stock holdings to set a financial theme. This portfolio
-            reflects my interests in the market and serves as a starting point for exploring my projects
-            and experiences in the world of fintech.
-          </p>
+      {/* FEATURED PROJECTS */}
+      <section style={{ maxWidth: 1100, margin: "56px auto 0", padding: "0 28px" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "baseline",
+            marginBottom: 24,
+          }}
+        >
+          <p className="eyebrow">Selected Work</p>
+          <Link
+            href="/projects"
+            style={{
+              color: "#d97757",
+              fontSize: ".8rem",
+              fontWeight: 500,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 5,
+            }}
+          >
+            All projects <Arrow />
+          </Link>
         </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section className="container mx-auto px-6 pb-20 flex-grow">
-        <div className="card-elevated p-8">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#faf9f5]">
-            My Investment Portfolio
-          </h2>
-
-          {loading ? (
-            <div className="text-center py-12">
-              <div className="inline-block w-8 h-8 border-2 border-[#d97757] border-t-transparent rounded-full animate-spin mb-4" />
-              <p className="text-[#b0aea5]">Loading market data...</p>
-            </div>
-          ) : error ? (
-            <div className="text-center py-8 card bg-[#f87171]/5 border-[#f87171]/20">
-              <p className="text-[#f87171]">{error}</p>
-            </div>
-          ) : (
-            <div className="max-w-4xl mx-auto overflow-hidden rounded-lg">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-[#b0aea5]/10">
-                      <th className="py-4 px-4 text-left font-semibold text-[#b0aea5] text-sm uppercase tracking-wider">
-                        Company
-                      </th>
-                      <th className="py-4 px-4 text-left font-semibold text-[#b0aea5] text-sm uppercase tracking-wider">
-                        Symbol
-                      </th>
-                      <th className="py-4 px-4 text-right font-semibold text-[#b0aea5] text-sm uppercase tracking-wider">
-                        Price
-                      </th>
-                      <th className="py-4 px-4 text-right font-semibold text-[#b0aea5] text-sm uppercase tracking-wider">
-                        Change
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {positions.map((position) => (
-                      <tr
-                        key={position.symbol}
-                        className="table-row group"
-                      >
-                        <td className="py-4 px-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#faf9f5]/5 p-2 
-                                          group-hover:bg-[#faf9f5]/10 transition-colors">
-                              <Image
-                                src={position.logo || "/placeholder.svg"}
-                                alt={position.company}
-                                width={24}
-                                height={24}
-                                className="object-contain"
-                                style={{ width: 'auto', height: 'auto' }}
-                              />
-                            </div>
-                            <a
-                              href={`https://www.google.com/finance/quote/${position.symbol}:${stockExchanges[position.symbol] || 'NASDAQ'}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[#faf9f5] hover:text-[#d97757] transition-colors font-medium"
-                            >
-                              {position.company}
-                            </a>
-                          </div>
-                        </td>
-                        <td className="py-4 px-4">
-                          <span className="font-mono text-[#b0aea5]">{position.symbol}</span>
-                        </td>
-                        <td className="py-4 px-4 text-right font-mono text-[#faf9f5]">
-                          ${position.price.toFixed(2)}
-                        </td>
-                        <td className={`py-4 px-4 text-right font-mono font-medium ${position.change >= 0 ? "text-[#4ade80]" : "text-[#f87171]"
-                          }`}>
-                          <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm
-                            ${position.change >= 0
-                              ? "bg-[#4ade80]/10"
-                              : "bg-[#f87171]/10"
-                            }`}
-                          >
-                            {position.change >= 0 ? "↑" : "↓"}
-                            {Math.abs(position.change).toFixed(2)}%
-                          </span>
-                        </td>
-                      </tr>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill,minmax(min(100%,310px),1fr))",
+            gap: 20,
+          }}
+        >
+          {featured.map((p, i) => {
+            const isExternal = p.link.startsWith("http");
+            const inner = (
+              <>
+                <div style={{ position: "relative", height: 180, background: "#111", overflow: "hidden" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      transition: "transform .5s",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "linear-gradient(to top,rgba(7,7,6,.95) 0%,rgba(7,7,6,.35) 55%,transparent 100%)",
+                    }}
+                  />
+                  <span className="bd" style={{ position: "absolute", top: 10, right: 10 }}>
+                    {p.date}
+                  </span>
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: 10,
+                      left: 12,
+                      display: "flex",
+                      gap: 5,
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    {p.tags.slice(0, 2).map((t) => (
+                      <span key={t} className="ba" style={{ fontSize: ".62rem" }}>
+                        {t}
+                      </span>
                     ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
+                  </div>
+                </div>
+                <div style={{ padding: "18px 20px" }}>
+                  <h2 style={{ fontSize: ".98rem", fontWeight: 600, color: "#faf9f5", marginBottom: 6 }}>
+                    {p.title}
+                  </h2>
+                  <p
+                    style={{
+                      color: "rgba(176,174,165,.75)",
+                      fontSize: ".8rem",
+                      lineHeight: 1.65,
+                      fontFamily: "var(--font-lora), Georgia, serif",
+                      marginBottom: 12,
+                    }}
+                  >
+                    {p.description.slice(0, 100)}…
+                  </p>
+                  <span style={{ color: "#d97757", fontSize: ".78rem", fontWeight: 500 }}>Explore →</span>
+                </div>
+              </>
+            );
+            const cardStyle = {
+              overflow: "hidden",
+              opacity: 0,
+              animation: "fadeUp .5s ease both",
+              animationDelay: `${0.1 + i * 0.1}s`,
+              cursor: "pointer",
+              display: "block",
+              color: "inherit",
+            } as const;
+            return isExternal ? (
+              <a
+                key={p.id}
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gc"
+                style={cardStyle}
+              >
+                {inner}
+              </a>
+            ) : (
+              <Link key={p.id} href={p.link} className="gc" style={cardStyle}>
+                {inner}
+              </Link>
+            );
+          })}
         </div>
       </section>
+
+      {/* RECENT WRITING */}
+      <section style={{ maxWidth: 1100, margin: "56px auto 0", padding: "0 28px" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "baseline",
+            marginBottom: 24,
+          }}
+        >
+          <p className="eyebrow">Recent Writing</p>
+          <Link
+            href="/blog"
+            style={{
+              color: "#d97757",
+              fontSize: ".8rem",
+              fontWeight: 500,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 5,
+            }}
+          >
+            All posts <Arrow />
+          </Link>
+        </div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill,minmax(min(100%,460px),1fr))",
+            gap: 16,
+          }}
+        >
+          {recentPosts.map((p, i) => (
+            <Link
+              key={p.id}
+              href={`/blog/${p.slug}`}
+              className="gc"
+              style={{
+                padding: "22px 26px",
+                cursor: "pointer",
+                opacity: 0,
+                animation: "fadeUp .5s ease both",
+                animationDelay: `${0.15 + i * 0.1}s`,
+                color: "inherit",
+                display: "block",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, marginBottom: 8 }}>
+                <span className="bd">{p.date}</span>
+              </div>
+              <h3
+                style={{
+                  fontSize: ".95rem",
+                  fontWeight: 600,
+                  color: "#faf9f5",
+                  lineHeight: 1.4,
+                  marginBottom: 8,
+                }}
+              >
+                {p.title}
+              </h3>
+              <p
+                style={{
+                  color: "rgba(176,174,165,.72)",
+                  fontSize: ".82rem",
+                  lineHeight: 1.65,
+                  fontFamily: "var(--font-lora), Georgia, serif",
+                  marginBottom: 12,
+                }}
+              >
+                {p.excerpt.slice(0, 110)}…
+              </p>
+              <span style={{ color: "#d97757", fontSize: ".78rem", fontWeight: 500 }}>Read more →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <div style={{ height: 80 }} />
     </div>
   );
 }
