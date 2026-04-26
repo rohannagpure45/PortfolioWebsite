@@ -38,3 +38,4 @@ mcp.json
 
 # agent
 .agent/
+.claude/
