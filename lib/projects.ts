@@ -44,7 +44,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "CutSchedule",
-    date: "Sep 2024",
+    date: "Nov 2025",
     description:
       "Modern appointment booking platform for barbers featuring SMS reminders, Google Calendar integration, and admin dashboard. Built with Next.js and PostgreSQL.",
     image: "/cutschedule.png",
@@ -54,7 +54,7 @@ export const projects: Project[] = [
   {
     id: 5,
     title: "AIR Health Coach",
-    date: "Apr 2024",
+    date: "Apr 2026",
     description:
       "Privacy-first AI exercise analysis platform using MediaPipe pose estimation and Gemini AI. Analyzes movement form, detects fatigue, and tracks rehabilitation progress — all processed locally.",
     image: "/yoga-pose.jpg",
@@ -64,7 +64,7 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "Vantage",
-    date: "Apr 2026",
+    date: "Feb 2026",
     description:
       "Multi-Agent Catastrophic Risk Simulation Platform that analyzes second and third-order effects of global disasters. Powered by GPT-5.2 and MiniMax M2.5 for agent orchestration with WebGL geospatial visualization.",
     image: "/vantage.svg",
