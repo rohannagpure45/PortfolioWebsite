@@ -12,6 +12,70 @@ export const supabase = (supabaseUrl && supabaseAnonKey)
 // Using negative IDs to avoid conflicts with real database IDs
 const localBackupPosts = [
   {
+    id: -22,
+    title: "Why the Playoffs Break Parlay Math",
+    excerpt: "Brandon Ingram took 15 shots in Game 2 and made three. Floor-line props would've cashed; the parlay got cooked. Here's why textbook parlay math breaks in April.",
+    content: `Brandon Ingram took 15 shots in Game 2 against Cleveland. He made three.
+
+If you parlayed any "over" on Ingram that night, you got cooked. If you took the floor, that he'd grab a rebound, attempt a few shots, hit a free throw, you probably cashed. Same player, same night, completely different result.
+
+This is the part the textbook doesn't tell you about.
+
+**The math everyone shows you**
+
+A parlay is a bundle of bets that all have to hit. If each leg is 90% to win, three legs together cost about 73 cents for a dollar payout. If you actually believe each leg is 92%, you're paying 73 to win 78. Five cents of edge. Real edge.
+
+That's the formula every sports betting blog will sell you.
+
+It's also wrong about half the time, because the legs aren't independent.
+
+**What the formula leaves out**
+
+Two players on the same team aren't two independent events. They share the same game. The same pace. The same blowout risk. The same defenses.
+
+When the Pistons get blown out in Game 4, Cade and his teammates all sit the fourth quarter together. When Toronto's offense disappears, every Raptor's points line goes under at once. When a coach decides to double team Banchero, his rebounds go up but his points go down, and his teammates get open looks they wouldn't have gotten otherwise.
+
+The math says prob(A) × prob(B). The reality is messier. Sometimes the legs help each other. Sometimes they cancel. The textbook charges you for none of it.
+
+**Floor lines are different**
+
+A floor line is a stat threshold so low it almost always hits. Not "scores 25+." More like "attempts five shots" or "grabs one rebound."
+
+These hold up under correlation pressure. The only way they fail is if a player gets hurt, ejected, or buried in garbage time, events that are rare and mostly about the player, not the game. That's the whole trick. You give up upside per leg, but you buy back independence. And independence is what makes parlay math actually work.
+
+**Then April happens**
+
+The playoffs change everything at once.
+
+Defenses tune up. Rotations shrink. Stars play 40 minutes a game; the bench plays zero. Three point shooting dies, nearly three quarters of playoff teams shoot worse from deep than they did in the regular season. Iso possessions go up. Assists go down. The guy who shot 38% from three in March is shooting 31% in April.
+
+What this does to props is brutal in two directions.
+
+Floor lines get better. Stars are on the floor longer and trying harder. Touches are coming. "1+ assist" is locked in by halftime.
+
+Ceiling lines get worse. Defenses are sharper. Shots are harder. The guy who put up 32 in March is putting up 22 on 8 of 22. And the correlation cuts deeper too, when an offense goes cold, it goes cold for everyone. Your "independent" 4 leg ceiling parlay turns into a single bet on whether the team's offense showed up.
+
+The 76ers had their worst shooting game of the season in Game 1 against Boston. Cade dropped 39 in his. Both happened the same week. Variance, everywhere.
+
+**The takeaway**
+
+Build them low.
+
+Floor props in the playoffs are quietly the best risk adjusted plays on the board, because the things that make the playoffs hard for everyone else, effort, defense, fatigue, actually work in your favor. Stars play more minutes. They take more shots. They try harder on every possession. The floors hold.
+
+Ceiling props are the trap. They look juicy because the price is cheap, but the price is cheap for a reason. You're not buying a parlay. You're buying a leveraged bet that one team's offense doesn't disappear for one night in April. That bet loses more often than the math suggests.
+
+I've spent the last few months building a system that does this for me, finds floor line edges in real time and layers correlation penalties before it fires anything. The specifics are the actual edge, so I'll keep those private. But the shape of it is just what's above.
+
+If you're playing parlays this postseason, build them low and keep them small. Brandon Ingram going 3 for 15 was the most predictable thing about Game 2.
+
+**Update (4/26)**
+
+Raptors played tonight. Brandon Ingram's shooting line: 6 for 23. The man is a one person case study.`,
+    date: "2026-04-26",
+    slug: "playoffs-break-parlay-math"
+  },
+  {
     id: -21,
     title: "Your Physical Therapist Can't Watch You at 2 AM",
     excerpt: "3.5 million youth sports injuries a year, and PT patients doing home exercises with zero feedback. I built an AI that watches your form so your therapist doesn't have to be in the room.",
