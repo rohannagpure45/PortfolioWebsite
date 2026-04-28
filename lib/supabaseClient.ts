@@ -290,12 +290,12 @@ Intelligence is.`,
   {
     id: -20,
     title: "The Dark Side of Clawdbot",
-    excerpt: "Clawdbot isn't evil. But I'm two days in and something's off. Not the tool — me. How fast I stopped doing things myself.",
+    excerpt: "Clawdbot isn't evil. But I'm two days in and something's off. Not the tool me. How fast I stopped doing things myself.",
     content: `The Dark Side of Clawdbot
 
-Clawdbot isn't evil. Open source, self-hosted, you own your data. It's one of the good ones.
+Clawdbot isn't evil. Open source, selfhosted, you own your data. It's one of the good ones.
 
-But I'm two days in and something's off. Not the tool — me. How fast I stopped doing things myself.
+But I'm two days in and something's off. Not the tool me. How fast I stopped doing things myself.
 
 **How it gets you**
 
@@ -325,13 +325,13 @@ Month three Sarah's just gone from your calendar. Nobody made that call. A patte
 
 Then the nudging. "You skipped the gym four times. You said you felt guilty on the 17th." Or "Pizza twice this week. Salad place with good reviews nearby."
 
-It's right though. You did say that. You do want to eat better. But there's something uncomfortable about a system that won't let you quietly give up on a resolution. Every half-assed promise you made at 11pm on a Tuesday — it remembers and holds you to it. Gently. Forever.
+It's right though. You did say that. You do want to eat better. But there's something uncomfortable about a system that won't let you quietly give up on a resolution. Every halfassed promise you made at 11pm on a Tuesday it remembers and holds you to it. Gently. Forever.
 
 That's not what freedom looks like.
 
 **The cost**
 
-Year three. Someone's AI assistant gets pulled and they can't function. Can't remember meetings, can't pick a restaurant, can't manage email. Not because they're dumb — because they haven't done any of it in three years.
+Year three. Someone's AI assistant gets pulled and they can't function. Can't remember meetings, can't pick a restaurant, can't manage email. Not because they're dumb because they haven't done any of it in three years.
 
 And relationships. I keep picturing this couples counseling scene:
 
@@ -347,7 +347,7 @@ And we're optimizing everything without asking what for. To be more productive? 
 
 **What I'm doing (probably temporarily)**
 
-I set some rules. No AI on money stuff without my sign-off, no creative work. I check in weekly on where my agency's shrinking. One day a week the whole thing goes off.
+I set some rules. No AI on money stuff without my signoff, no creative work. I check in weekly on where my agency's shrinking. One day a week the whole thing goes off.
 
 Sounds great on paper. Probably won't last.
 
@@ -359,7 +359,7 @@ Doubt it though.
 
 I wrote this entire thing about AI dependence being dangerous while using Claude and Clawdbot to research it. Make of that what you will.
 
-If you're thinking about setting up Clawdbot — ask yourself what you're optimizing toward. You won't stop once you start. Two days in, can't picture going back.
+If you're thinking about setting up Clawdbot ask yourself what you're optimizing toward. You won't stop once you start. Two days in, can't picture going back.
 
 Scares me. Not enough to uninstall it though.`,
     date: "2026-01-27",
