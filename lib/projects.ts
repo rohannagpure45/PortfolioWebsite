@@ -71,4 +71,24 @@ export const projects: Project[] = [
     link: "https://vantage-e4c8.vercel.app/?_vercel_share=k0hGIheFcKvUgBj6gmkktPfQ4Uh41DtA",
     tags: ["Next.js", "AI Agents", "WebGL", "Risk Simulation"],
   },
+  {
+    id: 7,
+    title: "Operator News Curation",
+    date: "Mar 2026",
+    description:
+      "Intelligent web agent that autonomously extracts, fact-checks, and summarizes content from news articles, X/Twitter, and SEC filings. Outputs PDF reports, executive briefings, and dashboards.",
+    image: "/news-curation.svg",
+    link: "https://github.com/rohannagpure45/operatorNewsCuration",
+    tags: ["Python", "AI Agent", "LLM", "Fact-Checking"],
+  },
+  {
+    id: 8,
+    title: "Kalshi NBA",
+    date: "May 2026",
+    description:
+      "Quantitative trading system for NBA prediction markets on Kalshi. Models in-game win probabilities and player prop outcomes to identify mispriced contracts in real time.",
+    image: "/kalshi-nba.svg",
+    link: "https://github.com/rohannagpure45/kalshiNBA",
+    tags: ["Python", "Quant", "Prediction Markets", "NBA"],
+  },
 ];

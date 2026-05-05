@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="kalshiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00897b"/>
+      <stop offset="50%" stop-color="#00695c"/>
+      <stop offset="100%" stop-color="#004d40"/>
+    </linearGradient>
+    <linearGradient id="ballGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9a3c"/>
+      <stop offset="60%" stop-color="#e07b1a"/>
+      <stop offset="100%" stop-color="#a8540a"/>
+    </linearGradient>
+    <radialGradient id="ballHighlight" cx="35%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#ffd194" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffd194" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#kalshiBg)"/>
+
+  <g opacity="0.08" stroke="#ffffff" stroke-width="2" fill="none">
+    <circle cx="650" cy="150" r="80"/>
+    <line x1="570" y1="150" x2="730" y2="150"/>
+    <rect x="570" y="100" width="160" height="100"/>
+    <circle cx="650" cy="150" r="20"/>
+  </g>
+
+  <ellipse cx="400" cy="600" rx="500" ry="180" fill="#000000" opacity="0.25" filter="url(#glowFilter)"/>
+
+  <text x="60" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="64" font-weight="700" fill="#ffffff" letter-spacing="-2">Kalshi</text>
+  <text x="60" y="180" font-family="system-ui,-apple-system,sans-serif" font-size="26" font-weight="400" fill="#ffffff" opacity="0.95">NBA Prediction Markets</text>
+
+  <circle cx="68" cy="218" r="5" fill="#ff5252"/>
+  <circle cx="68" cy="218" r="9" fill="#ff5252" opacity="0.3" filter="url(#glowFilter)"/>
+  <text x="82" y="223" font-family="monospace" font-size="13" fill="#ffffff" opacity="0.85" letter-spacing="2">LIVE</text>
+  <text x="125" y="223" font-family="monospace" font-size="13" fill="#ffffff" opacity="0.6">MIL vs BOS · Q3</text>
+
+  <rect x="60" y="260" width="320" height="80" rx="12" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="80" y="285" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#ffffff">Bucks win tonight?</text>
+  <text x="80" y="305" font-family="system-ui,sans-serif" font-size="11" fill="#ffffff" opacity="0.6">Volume: $124,580</text>
+  <rect x="80" y="315" width="180" height="14" rx="7" fill="#ffffff" opacity="0.15"/>
+  <rect x="80" y="315" width="124" height="14" rx="7" fill="#4caf50"/>
+  <text x="270" y="326" font-family="monospace" font-size="12" font-weight="700" fill="#ffffff">68¢</text>
+  <text x="305" y="326" font-family="monospace" font-size="11" fill="#81c784">+3</text>
+
+  <rect x="60" y="355" width="320" height="80" rx="12" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="80" y="380" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#ffffff">Giannis 30+ points?</text>
+  <text x="80" y="400" font-family="system-ui,sans-serif" font-size="11" fill="#ffffff" opacity="0.6">Volume: $86,210</text>
+  <rect x="80" y="410" width="180" height="14" rx="7" fill="#ffffff" opacity="0.15"/>
+  <rect x="80" y="410" width="142" height="14" rx="7" fill="#4caf50"/>
+  <text x="270" y="421" font-family="monospace" font-size="12" font-weight="700" fill="#ffffff">79¢</text>
+  <text x="305" y="421" font-family="monospace" font-size="11" fill="#ef5350">-2</text>
+
+  <rect x="60" y="450" width="320" height="80" rx="12" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="80" y="475" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#ffffff">Total points over 225.5?</text>
+  <text x="80" y="495" font-family="system-ui,sans-serif" font-size="11" fill="#ffffff" opacity="0.6">Volume: $52,940</text>
+  <rect x="80" y="505" width="180" height="14" rx="7" fill="#ffffff" opacity="0.15"/>
+  <rect x="80" y="505" width="78" height="14" rx="7" fill="#ff9800"/>
+  <text x="270" y="516" font-family="monospace" font-size="12" font-weight="700" fill="#ffffff">43¢</text>
+  <text x="305" y="516" font-family="monospace" font-size="11" fill="#81c784">+5</text>
+
+  <g transform="translate(620,340)">
+    <circle cx="0" cy="0" r="115" fill="url(#ballGrad)"/>
+    <circle cx="0" cy="0" r="115" fill="url(#ballHighlight)"/>
+    <circle cx="0" cy="0" r="115" fill="none" stroke="#5a2d05" stroke-width="2.5" opacity="0.6"/>
+    <path d="M 0 -115 Q 0 0 0 115" fill="none" stroke="#3a1d03" stroke-width="2.5" opacity="0.7"/>
+    <path d="M -115 0 Q 0 0 115 0" fill="none" stroke="#3a1d03" stroke-width="2.5" opacity="0.7"/>
+    <path d="M -82 -82 Q 0 -50 82 -82" fill="none" stroke="#3a1d03" stroke-width="2.5" opacity="0.7"/>
+    <path d="M -82 82 Q 0 50 82 82" fill="none" stroke="#3a1d03" stroke-width="2.5" opacity="0.7"/>
+  </g>
+
+  <g transform="translate(440,90)">
+    <rect x="0" y="0" width="180" height="100" rx="10" fill="url(#cardGrad)" stroke="#ffffff" stroke-opacity="0.2"/>
+    <text x="12" y="20" font-family="system-ui,sans-serif" font-size="10" fill="#ffffff" opacity="0.7">Win prob (24h)</text>
+    <text x="168" y="20" font-family="monospace" font-size="11" font-weight="700" fill="#4caf50" text-anchor="end">68%</text>
+    <polyline points="12,80 30,72 48,68 66,75 84,60 102,55 120,50 138,42 156,38 168,32" fill="none" stroke="#4caf50" stroke-width="2"/>
+    <polyline points="12,80 30,72 48,68 66,75 84,60 102,55 120,50 138,42 156,38 168,32 168,90 12,90" fill="#4caf50" opacity="0.15"/>
+  </g>
+
+  <circle cx="450" cy="500" r="2" fill="#ffffff" opacity="0.4"/>
+  <circle cx="500" cy="240" r="1.5" fill="#ffffff" opacity="0.3"/>
+  <circle cx="730" cy="450" r="2" fill="#ffffff" opacity="0.35"/>
+  <circle cx="420" cy="220" r="1.5" fill="#ffffff" opacity="0.3"/>
+</svg>

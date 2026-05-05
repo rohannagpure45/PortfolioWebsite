@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1a"/>
+      <stop offset="100%" stop-color="#1a1025"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e30"/>
+      <stop offset="100%" stop-color="#16162a"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <circle cx="200" cy="200" r="180" fill="#6366f1" opacity="0.04" filter="url(#softGlow)"/>
+  <circle cx="600" cy="400" r="150" fill="#8b5cf6" opacity="0.03" filter="url(#softGlow)"/>
+
+  <g opacity="0.05" stroke="#6366f1" stroke-width="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="160" y1="0" x2="160" y2="600"/><line x1="320" y1="0" x2="320" y2="600"/>
+    <line x1="480" y1="0" x2="480" y2="600"/><line x1="640" y1="0" x2="640" y2="600"/>
+  </g>
+
+  <rect x="60" y="80" width="280" height="160" rx="12" fill="url(#card)" stroke="#2a2a45" stroke-width="1"/>
+  <rect x="80" y="100" width="60" height="6" rx="3" fill="#6366f1" opacity="0.8"/>
+  <rect x="80" y="118" width="240" height="4" rx="2" fill="#4a4a6a" opacity="0.5"/>
+  <rect x="80" y="130" width="220" height="4" rx="2" fill="#4a4a6a" opacity="0.4"/>
+  <rect x="80" y="142" width="200" height="4" rx="2" fill="#4a4a6a" opacity="0.3"/>
+  <rect x="80" y="165" width="65" height="22" rx="11" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="0.8"/>
+  <text x="112" y="180" font-family="system-ui,sans-serif" font-size="10" fill="#34d399" text-anchor="middle">Verified</text>
+  <rect x="155" y="165" width="50" height="22" rx="11" fill="#6366f1" opacity="0.2" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="180" y="180" font-family="system-ui,sans-serif" font-size="10" fill="#a5b4fc" text-anchor="middle">SEC</text>
+
+  <rect x="100" y="270" width="280" height="140" rx="12" fill="url(#card)" stroke="#2a2a45" stroke-width="1"/>
+  <rect x="120" y="290" width="80" height="6" rx="3" fill="#f59e0b" opacity="0.8"/>
+  <rect x="120" y="308" width="240" height="4" rx="2" fill="#4a4a6a" opacity="0.5"/>
+  <rect x="120" y="320" width="210" height="4" rx="2" fill="#4a4a6a" opacity="0.4"/>
+  <rect x="120" y="332" width="180" height="4" rx="2" fill="#4a4a6a" opacity="0.3"/>
+  <rect x="120" y="355" width="75" height="22" rx="11" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="0.8"/>
+  <text x="157" y="370" font-family="system-ui,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Checking...</text>
+
+  <rect x="60" y="440" width="280" height="120" rx="12" fill="url(#card)" stroke="#2a2a45" stroke-width="1"/>
+  <rect x="80" y="460" width="55" height="6" rx="3" fill="#ec4899" opacity="0.8"/>
+  <rect x="80" y="478" width="240" height="4" rx="2" fill="#4a4a6a" opacity="0.5"/>
+  <rect x="80" y="490" width="200" height="4" rx="2" fill="#4a4a6a" opacity="0.4"/>
+  <rect x="80" y="512" width="60" height="22" rx="11" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="0.8"/>
+  <text x="110" y="527" font-family="system-ui,sans-serif" font-size="10" fill="#f472b6" text-anchor="middle">X/Twitter</text>
+
+  <line x1="340" y1="160" x2="460" y2="200" stroke="#6366f1" stroke-width="1" opacity="0.2" stroke-dasharray="4,4"/>
+  <line x1="380" y1="340" x2="460" y2="300" stroke="#f59e0b" stroke-width="1" opacity="0.2" stroke-dasharray="4,4"/>
+  <line x1="340" y1="500" x2="460" y2="400" stroke="#ec4899" stroke-width="1" opacity="0.2" stroke-dasharray="4,4"/>
+
+  <circle cx="490" cy="300" r="50" fill="#1e1e30" stroke="#6366f1" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="490" cy="300" r="50" fill="none" stroke="#6366f1" stroke-width="0.5" opacity="0.3" filter="url(#softGlow)"/>
+  <circle cx="490" cy="290" r="16" fill="none" stroke="#a5b4fc" stroke-width="1.5"/>
+  <path d="M480 290 Q480 278 490 278 Q500 278 500 290" fill="none" stroke="#a5b4fc" stroke-width="1.5"/>
+  <circle cx="485" cy="288" r="2" fill="#a5b4fc"/>
+  <circle cx="495" cy="288" r="2" fill="#a5b4fc"/>
+  <path d="M484 296 Q490 302 496 296" fill="none" stroke="#a5b4fc" stroke-width="1"/>
+  <text x="490" y="322" font-family="system-ui,sans-serif" font-size="9" fill="#6366f1" text-anchor="middle">AI Agent</text>
+
+  <line x1="540" y1="280" x2="600" y2="180" stroke="#10b981" stroke-width="1.5" opacity="0.4"/>
+  <line x1="540" y1="300" x2="600" y2="300" stroke="#10b981" stroke-width="1.5" opacity="0.4"/>
+  <line x1="540" y1="320" x2="600" y2="420" stroke="#10b981" stroke-width="1.5" opacity="0.4"/>
+
+  <rect x="600" y="140" width="140" height="80" rx="8" fill="url(#card)" stroke="#10b981" stroke-width="1" opacity="0.8"/>
+  <rect x="616" y="155" width="30" height="38" rx="3" fill="#1a1025" stroke="#ef4444" stroke-width="1"/>
+  <text x="631" y="178" font-family="system-ui,sans-serif" font-size="9" fill="#ef4444" text-anchor="middle">PDF</text>
+  <rect x="656" y="158" width="68" height="3" rx="1.5" fill="#4a4a6a" opacity="0.5"/>
+  <rect x="656" y="167" width="55" height="3" rx="1.5" fill="#4a4a6a" opacity="0.4"/>
+  <rect x="656" y="176" width="45" height="3" rx="1.5" fill="#4a4a6a" opacity="0.3"/>
+  <text x="670" y="205" font-family="system-ui,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Report</text>
+
+  <rect x="600" y="260" width="140" height="80" rx="8" fill="url(#card)" stroke="#10b981" stroke-width="1" opacity="0.8"/>
+  <rect x="616" y="276" width="108" height="48" rx="4" fill="#0f0f1a"/>
+  <rect x="626" y="306" width="10" height="14" rx="2" fill="#6366f1" opacity="0.7"/>
+  <rect x="642" y="296" width="10" height="24" rx="2" fill="#8b5cf6" opacity="0.7"/>
+  <rect x="658" y="302" width="10" height="18" rx="2" fill="#6366f1" opacity="0.7"/>
+  <rect x="674" y="290" width="10" height="30" rx="2" fill="#10b981" opacity="0.7"/>
+  <rect x="690" y="298" width="10" height="22" rx="2" fill="#8b5cf6" opacity="0.7"/>
+  <text x="670" y="340" font-family="system-ui,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Dashboard</text>
+
+  <rect x="600" y="380" width="140" height="80" rx="8" fill="url(#card)" stroke="#10b981" stroke-width="1" opacity="0.8"/>
+  <rect x="616" y="396" width="108" height="8" rx="2" fill="#4a4a6a" opacity="0.3"/>
+  <rect x="616" y="410" width="90" height="4" rx="2" fill="#4a4a6a" opacity="0.2"/>
+  <rect x="616" y="420" width="100" height="4" rx="2" fill="#4a4a6a" opacity="0.2"/>
+  <rect x="616" y="430" width="80" height="4" rx="2" fill="#4a4a6a" opacity="0.2"/>
+  <text x="670" y="452" font-family="system-ui,sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Briefing</text>
+
+  <circle cx="420" cy="120" r="2" fill="#6366f1" opacity="0.3"/>
+  <circle cx="550" cy="500" r="1.5" fill="#8b5cf6" opacity="0.25"/>
+  <circle cx="750" cy="150" r="1.5" fill="#10b981" opacity="0.3"/>
+  <circle cx="450" cy="520" r="2" fill="#f59e0b" opacity="0.2"/>
+</svg>
