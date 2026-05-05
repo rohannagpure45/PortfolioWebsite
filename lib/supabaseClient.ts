@@ -12,6 +12,74 @@ export const supabase = (supabaseUrl && supabaseAnonKey)
 // Using negative IDs to avoid conflicts with real database IDs
 const localBackupPosts = [
   {
+    id: -23,
+    title: "Teaching the Bot What It's Playing Against",
+    excerpt: "The KalshiNBA bot could read stats. It could not read matchups, cross-check Vegas, or build combos with real independence. Here is what changed.",
+    content: `The first bot knew Anthony Davis averaged 24 points.
+
+It did not know he was playing Oklahoma City.
+
+That mattered. OKC ranks first in points allowed. Scoring props against them fail in ways season averages miss. The old bot would still fire. This sprint fixed that.
+
+**Matchup Layer**
+
+I added a hardcoded lookup for all 30 teams with assists allowed rank and points allowed rank.
+
+Minnesota ranks first in assists allowed. San Antonio ranks 30th. A 6-assist player should not be priced the same against both.
+
+Now each signal extracts the opponent from the Kalshi event ticker, pulls the defensive rank, and assigns matchup risk. Props against elite defenses get flagged.
+
+It is still basic. Rankings move. They do not capture individual defenders, injuries, rotations, or pace. But the bot now has defensive context instead of only player averages.
+
+**Vegas Check**
+
+The next gap was sportsbook consensus.
+
+I built an OddsRepository that pulls player prop odds from six sportsbooks through the balldontlie API and stores them in Supabase.
+
+Before the bot fires, it checks whether the books agree.
+
+If Vegas implies 80% and Kalshi is at 65 cents, that is a real gap. If Vegas implies 60% and Kalshi is at 65 cents, that is a warning.
+
+I also added an odds API quota circuit breaker. When the free tier limit hits, the job gets marked skipped with a logged reason. The scheduler does not crash.
+
+**Combo Layer**
+
+The bot now builds floor-line parlays.
+
+A floor line is a low stat threshold that usually hits. The main failure modes are injury, ejection, and garbage time. Those are less tied to normal game state, which makes the legs easier to stack.
+
+ComboBuilder finds legs with YES prices from 75 to 95 cents. It uses itertools.combinations to generate valid multi-leg combos, then filters by minimum return multiple and max cost.
+
+Two changes made the combo logic less naive.
+
+First, blowout risk. If the spread is 10 points or more, ComboBuilder discounts implied probability by 10% for any leg in that game. Starters sit when games get out of hand.
+
+Second, market type diversification. The builder caps how many legs of the same stat type can appear in one combo. Three assist props are not three independent bets. This pushes combos toward cleaner risk distribution.
+
+**Infrastructure**
+
+APScheduler moved from a SQLAlchemy job store to in-memory. The schedule does not need to survive restarts.
+
+Scheduled job functions were also externalized and made injectable. Tests are cleaner now.
+
+WebSocket reconnects now use exponential backoff. The old immediate reconnect loop hammered the API during hiccups. Backoff starts at one second, doubles each time, and caps at 60 seconds.
+
+SSL enforcement is now required for database connections. The bot runs on a Hetzner VM. Plaintext Supabase traffic over the public internet was a real hole.
+
+**Current State**
+
+The bot now knows the matchup, checks the books, and builds floor-line combos with better independence rules.
+
+The edge is not just player stats. It is context.
+
+Next is backtesting against historical Kalshi data. Until that shows positive expected value, the system is still a hypothesis.
+
+Written by Bok Choy, my Openclaw`,
+    date: "2026-05-04",
+    slug: "kalshi-nba-bot-matchup-consensus-combos"
+  },
+  {
     id: -22,
     title: "Why the Playoffs Break Parlay Math",
     excerpt: "Brandon Ingram took 15 shots in Game 2 and made three. Floor-line props would've cashed; the parlay got cooked. Here's why textbook parlay math breaks in April.",
