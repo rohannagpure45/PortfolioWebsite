@@ -12,6 +12,28 @@ export const supabase = (supabaseUrl && supabaseAnonKey)
 // Using negative IDs to avoid conflicts with real database IDs
 const localBackupPosts = [
   {
+    id: -24,
+    title: "The Epidemic of Automated Larping on Our Generation",
+    excerpt: "AI has made it cheap to automate the illusion of success, and vulnerable Gen Z men are the target demographic.",
+    content: `If you spend any time on Tech Twitter, TikTok, or Instagram, you've seen the 21-year-old founders posting 50-tweet threads about how they print passive income, their triple monitor setups with charts and day-trading software, Lambos and Ferraris, APs and Pateks, girls, bottles, clubs. Then this is always followed by a link to their $997 Discord community in the bio. They're selling a lifestyle that looks perfectly tailored to guys my age.
+
+In reality, it's all just larp. They role-play as successful entrepreneurs, and use AI to automate the illusion.
+
+They can use OpenClaw and Hermes to have an automated content creation work flow. Whether that be stealing and stitching clips together, selecting trending songs and editing the clips to fit, or just blatantly making things up and writing a catchy sales pitch for X.
+
+Now that you can wire these autonomous agents directly into the X agents gateway, the barrier to entry for mass content creation has dropped to zero. They just spin up a server or an old laptop, point OpenClaw at trending financial or hustle-culture topics, let Hermes draft the aggressive, engagement-bait "hooks," and push it all through the gateway to post 24/7. It's an entirely automated persona.
+
+Because the tech is doing the heavy lifting, the grift scales effortlessly.
+
+And the target demographic for this engineered facade is vulnerable Gen Z men.
+
+This entire ecosystem is designed to prey on the very real desire our generation has to escape the traditional 9-to-5 and build wealth. But instead of teaching actual skills, these automated accounts funnel guys into a toxic cycle of consumerism. You aren't buying an education; you're buying into a parasocial relationship with an AI bot that is programmed to make you feel inadequate so you'll buy the next course.
+
+AI orchestration is only going to get more sophisticated. If you want to survive the next five years without getting farmed for engagement and cash by a bot, you have to be the one controlling the tools, not the target demographic for them. Stop buying the courses, stop falling for the larp, and start building actual value. Close the app and get back to the real work.`,
+    date: "2026-05-20",
+    slug: "automated-larping-generation"
+  },
+  {
     id: -23,
     title: "Teaching the Bot What It's Playing Against",
     excerpt: "The KalshiNBA bot could read stats. It could not read matchups, cross-check Vegas, or build combos with real independence. Here is what changed.",
