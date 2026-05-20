@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import StreamText from "@/components/chrome/StreamText";
 import GlassCard from "@/components/chrome/GlassCard";
+import DailyCrossword from "@/components/chrome/DailyCrossword";
 import { projects } from "@/lib/projects";
 import { getBlogPosts } from "@/lib/supabaseClient";
 
@@ -409,6 +410,11 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      {/* DAILY CROSSWORD */}
+      <section style={{ maxWidth: 1100, margin: "56px auto 0", padding: "0 28px" }}>
+        <DailyCrossword />
       </section>
 
       <div style={{ height: 80 }} />
