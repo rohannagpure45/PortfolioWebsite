@@ -43,7 +43,18 @@ const crosswordHtml = `<!doctype html>
       boatload_puzzles_format = 'Landscape';
     </script>
     <p>Loading <a href="https://www.boatloadpuzzles.com/playcrossword">crossword puzzle</a>. One moment please.</p>
-    <script type="text/javascript" src="https://www.boatloadpuzzles.com/Crossword.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.boatloadpuzzles.com/Crossword.js"
+      onload="window.setInterval(function () {
+        try {
+          window.parent.postMessage({
+            type: 'daily-crossword-state',
+            text: document.body ? document.body.innerText : ''
+          }, window.location.origin);
+        } catch (error) {}
+      }, 1000);"
+    ></script>
   </body>
 </html>`;
 
@@ -51,7 +62,7 @@ export function GET() {
   return new Response(crosswordHtml, {
     headers: {
       "Content-Type": "text/html; charset=utf-8",
-      "Cache-Control": "public, max-age=3600",
+      "Cache-Control": "no-store",
     },
   });
 }
