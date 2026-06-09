@@ -12,6 +12,24 @@ export const supabase = (supabaseUrl && supabaseAnonKey)
 // Using negative IDs to avoid conflicts with real database IDs
 const localBackupPosts = [
   {
+    id: -25,
+    title: "The New Claude Fable 5",
+    excerpt: "Claude Fable 5 feels like another turn in the Codex to Claude Code cycle, and maybe the first real crack in subsidized subscriptions.",
+    content: `Claude Fable 5 landed today. The interesting part is not the benchmark chart. It is the workflow shift: give the model a goal, then let it loop until the work is done.
+
+For the last 10 months I have gone Codex to Claude Code to Codex and back again, almost monthly. The winner is always whichever one can hold the bigger task in its head without making me babysit the middle.
+
+This month I learned to treat the agent less like autocomplete and more like a worker with a loop. /goal gives the run a finish line. /loop keeps it moving through the boring middle. That changes the kind of work I am willing to hand off.
+
+The catch is the business model. It is included for subscribers for two weeks, then the API meter matters. It is double Opus, still far cheaper than ChatGPT 5.5 Pro, and aggressive enough on bio/cyber prompts that you can feel the guardrails immediately.
+
+This might be the start of the end of subsidized frontier subscriptions. New models may stop being bundled like Fable. The monthly flip between Codex and Claude Code might become less about taste and more about who can afford to let us think bigger.
+
+Fable 5 sounds like a bet on that future: more thinking, harder creative work, longer autonomous runs. Karpathy's take was basically that it is strongest on long, difficult sessions, tempting enough that you might stop watching the code, but still quirky and over-eager on safety. His bigger point is the real one: when working software comes out on tap, demand explodes. Dashboards, explainers, tests, visualizers, research tools, weird one-off apps. Ask for more.`,
+    date: "2026-06-09",
+    slug: "fable-5-monthly-tool-flip"
+  },
+  {
     id: -24,
     title: "The Epidemic of Automated Larping on Our Generation",
     excerpt: "AI has made it cheap to automate the illusion of success, and vulnerable Gen Z men are the target demographic.",
